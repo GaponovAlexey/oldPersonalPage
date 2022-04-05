@@ -8,6 +8,12 @@ const Home: NextPage = () => {
       <Head>
         <title>AlexeyGaponov</title>
         <link rel='icon' href='#!' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap'
+          rel='stylesheet'
+        ></link>
       </Head>
       <Layout>
         <h1>hi</h1>

@@ -1,0 +1,5 @@
+@tailwind components;
+
+.componentheader {
+  @apply bg-slate-900 text-cyan-50 p-4;
+}
