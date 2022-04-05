@@ -8,7 +8,8 @@ const Home: NextPage = () => {
         <title>AlexeyGaponov</title>
         <link rel='icon' href='#!' />
       </Head>
-      start
+      <h1>start</h1>
+      <h3>start</h3>
     </div>
   )
 }
