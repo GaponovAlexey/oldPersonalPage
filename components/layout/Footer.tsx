@@ -1,5 +1,6 @@
+import s from '../../styles/Home.module.scss'
 const Footer = () => {
-  return <div>footer</div>
+  return <div className={s.footer}>footer</div>
 }
 
 export default Footer
