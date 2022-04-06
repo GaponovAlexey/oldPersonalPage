@@ -6,6 +6,9 @@ const Header = () => {
       <ul>
         <li>home</li>
         <li>workshop</li>
+        <li>about me</li>
+        <li>skills</li>
+        <li>contact me</li>
       </ul>
     </div>
   )
