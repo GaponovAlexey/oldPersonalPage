@@ -1,5 +1,14 @@
 @tailwind components;
 
-.componentheader {
-  @apply bg-black text-cyan-50 p-4 ;
+.componentHeader {
+  @apply bg-black text-cyan-50 py-4 px-2 flex justify-between;
+  > ul {
+    @apply flex;
+    > li {
+      @apply pl-2;
+    }
+  }
+  > h1 {
+    @apply text-2xl;
+  }
 }
