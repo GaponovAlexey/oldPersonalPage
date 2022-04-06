@@ -6,7 +6,7 @@
     @apply flex;
     > li {
       @apply pl-2 hover:text-red-500 cursor-pointer
-       last:text-blue-500 ;
+       last:text-blue-500;
     }
   }
   > h1 {
