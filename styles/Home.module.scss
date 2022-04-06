@@ -3,7 +3,7 @@
   > ul {
     @apply flex;
     > li {
-      @apply pl-2 hover:text-red-500 cursor-pointer
+      @apply pl-10 hover:text-red-500 cursor-pointer
        last:text-blue-500;
     }
   }
@@ -13,5 +13,8 @@
 }
 
 .footer {
-  @apply text-white;
+  @apply text-white text-center;
+  > a {
+    @apply text-blue-200;
+  }
 }
