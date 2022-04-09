@@ -18,3 +18,10 @@
     @apply text-blue-200;
   }
 }
+
+.main {
+  @apply flex pt-10;
+  > p {
+    @apply flex-wrap pl-10 text-center;
+  }
+}

@@ -1,19 +1,33 @@
 import Image from 'next/image'
-import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
+import s from '../styles/Home.module.scss'
 const Main = () => {
-  const x = useMotionValue(0)
-  const scaleZ = useTransform(x, (v) => v / 100)
   return (
-    <div className='flex'>
-      <Image src='/jpg/1.png' width='540%' height='720%' />
-      <div className='flex-wrap pl-40 ml-20 '>
+    <div className={s.main}>
+      <motion.div
+        transition={{
+          repeat: Infinity,
+          repeatType: 'reverse',
+          type: 'tween',
+          ease: 'easeIn',
+        }}
+        animate={{ rotate: 0.1 }}
+      >
+        <Image src='/jpg/1.png' width='540%' height='720%' />
+      </motion.div>
+
+      <motion.p
+        initial={{ x: +1000 }}
+        animate={{ x: 0 }}
+        // exit={{ x: -1000 }}
+
+        transition={{
+          type: 'spring',
+          // duration: 0.4,
+        }}
+      >
         test
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        />
-      </div>
+      </motion.p>
     </div>
   )
 }
