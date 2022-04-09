@@ -3,11 +3,11 @@ import { motion } from 'framer-motion'
 import s from '../styles/Home.module.scss'
 const Main = () => {
   const text = [
-    { title: 'text1' },
-    { title: 'text2' },
-    { title: 'text3' },
-    { title: 'text4' },
-    { title: 'text5' },
+    { title: 'Hello' },
+    { title: 'I from Ukraine' },
+    { title: 'I live in St.Petersburg' },
+    { title: 'I web developer' },
+    { title: 'I love my work' },
   ]
   const pVariants = {
     hidden: { x: +1000 },
@@ -16,11 +16,7 @@ const Main = () => {
       type: 'tween',
       duration: 0.3,
     },
-    trammpa: {
-      duration: 0.2,
-    },
   }
-  
 
   return (
     <div className={s.main}>
@@ -31,38 +27,26 @@ const Main = () => {
         <Image src='/jpg/1.png' width='540%' height='720%' />
       </motion.div>
 
-      <motion.p
+      <motion.span
         initial={pVariants.hidden}
         animate={pVariants.visible}
         transition={pVariants.trans}
       >
-        test
-      </motion.p>
+        About me
+      </motion.span>
 
-      <div>
-        <motion.div
-          initial={pVariants.hidden}
-          animate={pVariants.visible}
-          transition={pVariants.trans}
-          whileHover={{
-            scale: 1.3,
-            color: 'pink',
-          }}
-        >
-          Hover
-        </motion.div>
-      </div>
-      <span className='pt-10'>
+      <ul>
         {text.map((el, i) => (
-          <motion.h2
+          <motion.li
+            key={i}
             initial={{ opacity: 0, x: +1000 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ type: 'tween', delay: i * 0.5 }}
+            transition={{ type: 'tween', delay: i * 1 }}
           >
             {el.title}
-          </motion.h2>
+          </motion.li>
         ))}
-      </span>
+      </ul>
     </div>
   )
 }

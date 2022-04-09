@@ -1,7 +1,7 @@
 .componentHeader {
   @apply bg-black text-cyan-50 py-4 px-2 flex justify-between;
   > ul {
-    @apply flex;
+    @apply flex flex-wrap;
     > li {
       @apply pl-10 hover:text-red-500 cursor-pointer
        last:text-blue-500;
@@ -20,8 +20,11 @@
 }
 
 .main {
-  @apply flex pt-10;
-  > p {
-    @apply flex-wrap pl-10 ml-20;
+  @apply flex flex-wrap;
+  > span {
+    /* @apply ; */
+  }
+  > ul {
+    @apply text-violet-200;
   }
 }
