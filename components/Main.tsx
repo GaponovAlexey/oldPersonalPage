@@ -10,8 +10,8 @@ const Main = () => {
     { title: 'text5' },
   ]
   const pVariants = {
-    hidden: { x: +1000, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
+    hidden: { x: +1000 },
+    visible: { x: 0 },
     trans: {
       type: 'tween',
       duration: 0.3,
@@ -20,26 +20,12 @@ const Main = () => {
       duration: 0.2,
     },
   }
-  const ListVariants = {
-    visible: (i: number) => ({
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: i * 0.5,
-      },
-    }),
-    hidden: { x: +1000, opacity: 0 },
-  }
+  
 
   return (
     <div className={s.main}>
       <motion.div
-        transition={{
-          repeat: Infinity,
-          repeatType: 'reverse',
-          type: 'tween',
-          ease: 'easeIn',
-        }}
+        transition={{ repeat: Infinity, repeatType: 'reverse', type: 'tween' }}
         animate={{ rotate: 0.1 }}
       >
         <Image src='/jpg/1.png' width='540%' height='720%' />
@@ -69,8 +55,9 @@ const Main = () => {
       <span className='pt-10'>
         {text.map((el, i) => (
           <motion.h2
-            initial={ListVariants.hidden}
-            animate={ListVariants.visible(i)}
+            initial={{ opacity: 0, x: +1000 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: 'tween', delay: i * 0.5 }}
           >
             {el.title}
           </motion.h2>
