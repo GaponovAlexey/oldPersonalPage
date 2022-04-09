@@ -2,6 +2,35 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import s from '../styles/Home.module.scss'
 const Main = () => {
+  const text = [
+    { title: 'text1' },
+    { title: 'text2' },
+    { title: 'text3' },
+    { title: 'text4' },
+    { title: 'text5' },
+  ]
+  const pVariants = {
+    hidden: { x: +1000, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+    trans: {
+      type: 'tween',
+      duration: 0.3,
+    },
+    trammpa: {
+      duration: 0.2,
+    },
+  }
+  const ListVariants = {
+    visible: (i: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.5,
+      },
+    }),
+    hidden: { x: +1000, opacity: 0 },
+  }
+
   return (
     <div className={s.main}>
       <motion.div
@@ -17,17 +46,36 @@ const Main = () => {
       </motion.div>
 
       <motion.p
-        initial={{ x: +1000 }}
-        animate={{ x: 0 }}
-        // exit={{ x: -1000 }}
-
-        transition={{
-          type: 'spring',
-          // duration: 0.4,
-        }}
+        initial={pVariants.hidden}
+        animate={pVariants.visible}
+        transition={pVariants.trans}
       >
         test
       </motion.p>
+
+      <div>
+        <motion.div
+          initial={pVariants.hidden}
+          animate={pVariants.visible}
+          transition={pVariants.trans}
+          whileHover={{
+            scale: 1.3,
+            color: 'pink',
+          }}
+        >
+          Hover
+        </motion.div>
+      </div>
+      <span className='pt-10'>
+        {text.map((el, i) => (
+          <motion.h2
+            initial={ListVariants.hidden}
+            animate={ListVariants.visible(i)}
+          >
+            {el.title}
+          </motion.h2>
+        ))}
+      </span>
     </div>
   )
 }
