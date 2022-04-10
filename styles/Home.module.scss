@@ -1,7 +1,7 @@
 .layout {
   @apply w-9/12 m-auto max-w-[1080px];
   .child {
-    @apply h-[87vh] overflow-hidden;
+    @apply h-screen overflow-hidden;
   }
 }
 
@@ -27,11 +27,16 @@
 }
 
 .main {
-  @apply flex flex-wrap;
   > strong {
-    @apply text-blue-300 pl-10;
+    @apply text-right ;
+  }
+  .about {
+    @apply flex flex-wrap lg:flex-none;
+  > strong {
+    @apply text-blue-300 pl-10 ;
   }
   > ul {
     @apply text-violet-200;
   }
+}
 }
