@@ -11,7 +11,7 @@ const Home = () => {
   ]
 
   const about = [
-    { title: ' \tI have 3+ years of experience in general and,' },
+    { title: '\tI have 3+ years of experience in general and,' },
     { title: 'one year of frontend development in particular' },
     { title: 'I am sure I would be an excellent addition to your company' },
     { title: "I'm keen on coding and," },

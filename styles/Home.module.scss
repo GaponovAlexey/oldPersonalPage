@@ -27,11 +27,12 @@
 }
 
 .main {
+  /* @apply ; */
   > strong {
-    @apply text-right text-blue-400  ;
+    @apply text-right text-blue-400;
   }
   .about {
-    @apply flex flex-wrap md:flex-none;
+    @apply flex ;
     > div {
         @apply pl-10 ;
       > strong {
