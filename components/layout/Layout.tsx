@@ -1,12 +1,13 @@
 import { FC } from 'react'
 import Footer from './Footer'
 import Header from './Header'
+import s from '../../styles/Home.module.scss'
 
 const Layout: FC = ({ children }) => {
   return (
-    <div className='w-9/12 m-auto'>
+    <div className={s.layout}>
       <Header />
-      <div className='h-screen'>{children}</div>
+      <div className={s.child}>{children}</div>
       <Footer />
     </div>
   )

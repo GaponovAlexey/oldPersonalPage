@@ -3,50 +3,49 @@ import { motion } from 'framer-motion'
 import s from '../styles/Home.module.scss'
 const Main = () => {
   const text = [
-    { title: 'Hello' },
+    { title: "Hi there 👋, I'm Alexey'" },
     { title: 'I from Ukraine' },
     { title: 'I live in St.Petersburg' },
     { title: 'I web developer' },
     { title: 'I love my work' },
   ]
-  const pVariants = {
-    hidden: { x: +1000 },
-    visible: { x: 0 },
-    trans: {
-      type: 'tween',
-      duration: 0.3,
-    },
-  }
 
   return (
     <div className={s.main}>
       <motion.div
-        transition={{ repeat: Infinity, repeatType: 'reverse', type: 'tween' }}
-        animate={{ rotate: 0.1 }}
+        transition={{ type: 'tween' }}
+        initial={{ opacity: 0, x: -500 }}
+        animate={{ rotate: 0.1, opacity: 1, x: 0 }}
       >
         <Image src='/jpg/1.png' width='540%' height='720%' />
       </motion.div>
 
-      <motion.span
-        initial={pVariants.hidden}
-        animate={pVariants.visible}
-        transition={pVariants.trans}
-      >
-        About me
-      </motion.span>
-
-      <ul>
-        {text.map((el, i) => (
-          <motion.li
-            key={i}
-            initial={{ opacity: 0, x: +1000 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ type: 'tween', delay: i * 1 }}
-          >
-            {el.title}
-          </motion.li>
-        ))}
-      </ul>
+      <strong>
+        <motion.div
+          initial={{ x: +500 }}
+          animate={{ x: 0 }}
+          transition={{
+            type: 'tween',
+            duration: 0.3,
+          }}
+        >
+          About me
+        </motion.div>
+      </strong>
+      <strong>
+        <ol>
+          {text.map((el, i) => (
+            <motion.li
+              key={i}
+              initial={{ opacity: 0, x: +500 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ type: 'tween', delay: i * 1 }}
+            >
+              {el.title}
+            </motion.li>
+          ))}
+        </ol>
+      </strong>
     </div>
   )
 }

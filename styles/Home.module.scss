@@ -1,3 +1,10 @@
+.layout {
+  @apply w-9/12 m-auto max-w-[1080px];
+  .child {
+    @apply h-screen;
+  }
+}
+
 .componentHeader {
   @apply bg-black text-cyan-50 py-4 px-2 flex justify-between;
   > ul {
@@ -21,8 +28,8 @@
 
 .main {
   @apply flex flex-wrap;
-  > span {
-    /* @apply ; */
+  > strong {
+    @apply text-blue-300 pl-10;
   }
   > ul {
     @apply text-violet-200;

@@ -7,11 +7,14 @@ const Header = () => {
       <ul>
         <li>home</li>
         <li>workshop</li>
-        <li>about me</li>
         <li>skills</li>
-        <motion.li transition={{
-          type: 'just',
-          repeat: Infinity }} animate={{ rotate: 2 }}>
+        <motion.li
+          transition={{
+            type: 'just',
+            repeat: Infinity,
+          }}
+          animate={{ rotate: 2 }}
+        >
           contact me
         </motion.li>
       </ul>
