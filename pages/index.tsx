@@ -16,9 +16,7 @@ const Home: NextPage = () => {
           rel='stylesheet'
         ></link>
       </Head>
-      <Layout>
-        <Main/>
-      </Layout>
+      <Main />
     </div>
   )
 }
