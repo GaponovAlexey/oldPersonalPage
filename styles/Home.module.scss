@@ -1,5 +1,5 @@
 .layout {
-  @apply w-9/12 m-auto max-w-[1080px];
+  @apply w-9/12 m-auto max-w-[1024px];
   .child {
     @apply h-screen overflow-hidden;
   }
@@ -28,15 +28,19 @@
 
 .main {
   > strong {
-    @apply text-right ;
+    @apply text-right text-blue-400  ;
   }
   .about {
-    @apply flex flex-wrap lg:flex-none;
-  > strong {
-    @apply text-blue-300 pl-10 ;
-  }
-  > ul {
-    @apply text-violet-200;
-  }
+    @apply flex flex-wrap md:flex-none;
+    > p {
+        @apply pl-10 ;
+      > strong {
+        @apply text-blue-300 ;
+        li {
+          @apply leading-[26px] ;
+        }
+      }
+    }
+  
 }
 }

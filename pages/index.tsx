@@ -2,14 +2,24 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import s from '../styles/Home.module.scss'
 const Home = () => {
-  const text = [
+  const base = [
     { title: "Hi there 👋, I'm Alexey'" },
     { title: 'I Web Developer' },
     { title: 'I Work in React and Redux' },
     { title: 'I love my family and my work' },
     { title: 'Citizenship: Ukraine' },
-    { title: 'I have 3+ years of experience in general and ' },
-    { title: 'one years of frontend development in particular' },
+  ]
+
+  const about = [
+    { title: 'I have 3+ years of experience in general and,' },
+    { title: 'one year of frontend development in particular' },
+    { title: 'I am sure I would be an excellent addition to your company' },
+    { title: "I'm keen on coding and," },
+    { title: 'actively seek out new technologies and stay up-to-date,' },
+    { title: 'on industry trends and advancements.' },
+    { title: 'Ready to share my knowledge and experience' },
+    { title: 'Like to challenge myself.' },
+    { title: 'I can build good relationships with different people ' },
   ]
 
   return (
@@ -31,25 +41,42 @@ const Home = () => {
         <motion.div
           transition={{ type: 'tween' }}
           initial={{ opacity: 0, x: -300 }}
-          animate={{ rotate: 0.1, opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
         >
-          <Image src='/jpg/1.png' width='540%' height='720%' />
+          <Image src='/jpg/1.png' width='455%' height='620%' />
         </motion.div>
-
-        <strong>
-          <ol>
-            {text.map((el, i) => (
-              <motion.li
-                key={i}
-                initial={{ opacity: 0, x: +300 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ type: 'tween', delay: i * 0.08 }}
-              >
-                {el.title}
-              </motion.li>
-            ))}
-          </ol>
-        </strong>
+        <p>
+          <strong>
+            <ul>
+              {base.map((el, i) => (
+                <motion.li
+                  className='prose max-w-none'
+                  key={i}
+                  initial={{ opacity: 0, x: +300 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ type: 'tween', delay: i * 0.04 }}
+                >
+                  {el.title}
+                </motion.li>
+              ))}
+            </ul>
+          </strong>
+          <strong>
+            <ul>
+              {about.map((el, i) => (
+                <motion.li
+                  className='prose max-w-none'
+                  key={i}
+                  initial={{ opacity: 0, x: +300 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ type: 'tween', delay: i * 0.04 }}
+                >
+                  {el.title}
+                </motion.li>
+              ))}
+            </ul>
+          </strong>
+        </p>
       </div>
     </div>
   )
