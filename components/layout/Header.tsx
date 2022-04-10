@@ -16,26 +16,28 @@ const Header = () => {
         ></link>
       </Head>
       <h1>Personal</h1>
-      <ul>
-        <li>
-          <Link href='/'>Home</Link>
-        </li>
-        <li>
-          <Link href='/workShop'>Workshop</Link>
-        </li>
-        <li>
-          <Link href='/Skills'>Skills</Link>
-        </li>
-        <motion.li
-          transition={{
-            type: 'just',
-            repeat: Infinity,
-          }}
-          animate={{ rotate: 2 }}
-        >
-          contact me
-        </motion.li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <Link href='/'>Home</Link>
+          </li>
+          <li>
+            <Link href='/workShop'>Workshop</Link>
+          </li>
+          <li>
+            <Link href='/Skills'>Skills</Link>
+          </li>
+          <motion.li
+            transition={{
+              type: 'just',
+              repeat: Infinity,
+            }}
+            animate={{ rotate: 2 }}
+          >
+            contact me
+          </motion.li>
+        </ul>
+      </nav>
     </div>
   )
 }

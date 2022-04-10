@@ -11,7 +11,7 @@ const Home = () => {
   ]
 
   const about = [
-    { title: 'I have 3+ years of experience in general and,' },
+    { title: ' \tI have 3+ years of experience in general and,' },
     { title: 'one year of frontend development in particular' },
     { title: 'I am sure I would be an excellent addition to your company' },
     { title: "I'm keen on coding and," },
@@ -45,12 +45,11 @@ const Home = () => {
         >
           <Image src='/jpg/1.png' width='455%' height='620%' />
         </motion.div>
-        <p>
+        <div>
           <strong>
             <ul>
               {base.map((el, i) => (
                 <motion.li
-                  className='prose max-w-none'
                   key={i}
                   initial={{ opacity: 0, x: +300 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -61,22 +60,23 @@ const Home = () => {
               ))}
             </ul>
           </strong>
+          <br />
+          <br />
           <strong>
             <ul>
               {about.map((el, i) => (
                 <motion.li
-                  className='prose max-w-none'
                   key={i}
                   initial={{ opacity: 0, x: +300 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ type: 'tween', delay: i * 0.04 }}
                 >
-                  {el.title}
+                  <text>{el.title}</text>
                 </motion.li>
               ))}
             </ul>
           </strong>
-        </p>
+        </div>
       </div>
     </div>
   )

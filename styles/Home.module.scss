@@ -7,7 +7,7 @@
 
 .componentHeader {
   @apply bg-black text-cyan-50 py-4 px-2 flex justify-between;
-  > ul {
+  > nav > ul {
     @apply flex flex-wrap;
     > li {
       @apply pl-10 hover:text-red-500 cursor-pointer
@@ -32,12 +32,12 @@
   }
   .about {
     @apply flex flex-wrap md:flex-none;
-    > p {
+    > div {
         @apply pl-10 ;
       > strong {
-        @apply text-blue-300 ;
-        li {
-          @apply leading-[26px] ;
+        @apply text-gray-400;
+        text {
+          @apply text-gray-600 ;
         }
       }
     }
