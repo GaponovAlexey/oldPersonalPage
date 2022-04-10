@@ -20,7 +20,7 @@
 }
 
 .footer {
-  @apply text-white text-center;
+  @apply text-center text-gray-500;
   > a {
     @apply text-blue-200;
   }
@@ -32,11 +32,14 @@
     @apply text-right text-blue-400;
   }
   .about {
-    @apply flex ;
-    > div {
-        @apply pl-10 ;
-      > strong {
-        @apply text-gray-400;
+    @apply flex;
+    > div  {
+      @apply lg:flex-wrap;
+        > strong {
+          @apply  text-gray-400;
+          > ul {  
+            @apply ml-10 ;
+        }
         text {
           @apply text-gray-600 ;
         }
