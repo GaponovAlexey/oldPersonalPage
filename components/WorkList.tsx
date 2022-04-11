@@ -1,10 +1,13 @@
-const WorkList = ({ offsetY }) => {
-  const height = 250
+import { motion, useTransform } from 'framer-motion'
+const WorkList = ({ offsetY, scrollY }: any) => {
+  const heightSize = [50, 250]
+  const height = useTransform(scrollY, offsetY, heightSize)
+
   const fontSize = 30
   return (
-    <div>
-      <ul style={{ height, fontSize }}>
-        <div className='grid grid-cols-3 '>
+    <div className='sticky  top-0 w-full overflow-hidden'>
+      <motion.ul style={{ height, fontSize }}>
+        <div className='grid grid-cols-3 p-2'>
           <div>
             <li>React</li>
             <li>NextJs</li>
@@ -16,7 +19,7 @@ const WorkList = ({ offsetY }) => {
             <li>e-commerce</li>
           </div>
         </div>
-      </ul>
+      </motion.ul>
     </div>
   )
 }

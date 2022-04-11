@@ -1,7 +1,7 @@
 .layout {
   @apply w-9/12 m-auto max-w-[1024px];
   .child {
-    @apply h-full overflow-hidden;
+    @apply min-h-[80vh] max-h-full;
   }
 }
 
@@ -27,7 +27,6 @@
 }
 
 .main {
-  /* @apply ; */
   > strong {
     @apply text-right text-blue-400;
   }
