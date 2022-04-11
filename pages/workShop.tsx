@@ -4,35 +4,23 @@ import WorkList from '../components/WorkList'
 
 const WorkShop: NextPage = () => {
   const { scrollY } = useViewportScroll()
-  const offsetY = [50, 300]
-
+  const offsetY = [0, 300]
+  
+  const marginTop = useTransform(scrollY, offsetY, offsetY)
   return (
     <div>
-      <WorkList offsetY={offsetY} scrollY={scrollY} />
-      <div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <div className='h-60 bg-slate-300'>block</div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <div className='h-60 bg-slate-300'>block</div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <div className='h-60 bg-slate-300'>block</div>
-        </motion.div>
+      <div className='sticky top-0 w-full '>
+        <WorkList offsetY={offsetY} scrollY={scrollY} />
       </div>
-      <div></div>
+      <motion.div style={{ marginTop }}>
+        <div className='h-[560px] bg-slate-300'>block</div>
+      </motion.div>
+      <motion.div style={{ marginTop }}>
+        <div className='h-[560px] bg-slate-300'>block</div>
+      </motion.div>
+      <motion.div style={{ marginTop }}>
+        <div className='h-[560px] bg-slate-300'>block</div>
+      </motion.div>
     </div>
   )
 }
