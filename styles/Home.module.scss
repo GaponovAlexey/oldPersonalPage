@@ -1,7 +1,7 @@
 .layout {
   @apply w-9/12 m-auto max-w-[1024px];
   .child {
-    @apply h-screen overflow-hidden;
+    @apply h-full overflow-hidden;
   }
 }
 

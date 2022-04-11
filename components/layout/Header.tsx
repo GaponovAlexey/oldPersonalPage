@@ -18,15 +18,15 @@ const Header = () => {
       <h1>Personal</h1>
       <nav>
         <ul>
-          <li>
-            <Link href='/'>Home</Link>
-          </li>
-          <li>
-            <Link href='/workShop'>Workshop</Link>
-          </li>
-          <li>
-            <Link href='/Skills'>Skills</Link>
-          </li>
+          <Link href='/'>
+            <li>Home</li>
+          </Link>
+          <Link href='/workShop'>
+            <li>Workshop</li>
+          </Link>
+          <Link href='/Skills'>
+            <li>Skills</li>
+          </Link>
           <motion.li
             transition={{
               type: 'just',
