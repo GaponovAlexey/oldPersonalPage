@@ -1,12 +1,15 @@
+import { NextPage } from 'next'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
+import WorkList from '../components/WorkList'
 
-const WorkShop = () => {
-  const {scrollY } = useViewportScroll()
-  const offsetY = [0, 300];
+const WorkShop: NextPage = () => {
+  const { scrollY } = useViewportScroll()
+
+  const offsetY: number[] = [0, 300]
 
   return (
     <div>
-      <h1>shop</h1>
+      <WorkList offsetY={offsetY} />
       <div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -16,9 +19,7 @@ const WorkShop = () => {
           <div className='h-60 bg-slate-300'>block</div>
         </motion.div>
       </div>
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   )
 }

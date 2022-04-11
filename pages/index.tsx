@@ -66,8 +66,8 @@ const Home = () => {
               {about.map((el, i) => (
                 <motion.li
                   key={i}
-                  initial={{ opacity: 0, x: +300 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: +300 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ type: 'tween', delay: i * 0.04 }}
                 >
                   <text>{el.title}</text>
