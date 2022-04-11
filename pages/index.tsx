@@ -1,27 +1,26 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import s from '../styles/Home.module.scss'
+const base = [
+  { title: "Hi there 👋, I'm Alexey'" },
+  { title: 'I am a Web Developer' },
+  { title: 'I Work in React and Redux' },
+  { title: 'I love my family and my work' },
+  { title: 'Citizenship: Ukraine' },
+]
+
+const about = [
+  { title: 'I have 2+ years of experience in general and,' },
+  { title: 'one year of frontend development in particular.' },
+  { title: 'I am sure I would be an excellent addition to your company.' },
+  { title: "I'm keen on coding and actively seek out," },
+  { title: 'new technologies and stay up-to-date,' },
+  { title: 'on industry trends and advancements.' },
+  { title: 'Ready to share my knowledge and experience' },
+  { title: 'Like to challenge myself.' },
+  { title: 'I can build good relationships with different people ' },
+]
 const Home = () => {
-  const base = [
-    { title: "Hi there 👋, I'm Alexey'" },
-    { title: 'I am a Web Developer' },
-    { title: 'I Work in React and Redux' },
-    { title: 'I love my family and my work' },
-    { title: 'Citizenship: Ukraine' },
-  ]
-
-  const about = [
-    { title: 'I have 2+ years of experience in general and,' },
-    { title: 'one year of frontend development in particular.' },
-    { title: 'I am sure I would be an excellent addition to your company.' },
-    { title: "I'm keen on coding and actively seek out," },
-    { title: 'new technologies and stay up-to-date,' },
-    { title: 'on industry trends and advancements.' },
-    { title: 'Ready to share my knowledge and experience' },
-    { title: 'Like to challenge myself.' },
-    { title: 'I can build good relationships with different people ' },
-  ]
-
   return (
     <div className={s.main}>
       <strong>
