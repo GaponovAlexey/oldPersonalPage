@@ -1,12 +1,12 @@
 import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 
-interface Props {
-  emoji: string
-  hueA: number
-  hueB: number
-  urls: string
-}
+// interface Props {
+//   emoji: string
+//   hueA: number
+//   hueB: number
+//   urls: string
+// }
 
 const cardVariants: Variants = {
   offscreen: {
@@ -23,12 +23,20 @@ const cardVariants: Variants = {
   },
 }
 
-// const hue = (h: number) => `hsl(${h}, 100%, 50%)`
-// const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`
 
 const food: any = [
   {
     photoWork: '/jpg/portfolio/port1.png',
+    url: 'https://podiatry-victoria.vercel.app/',
+    hueA: 30,
+    hueB: 50,
+  },
+  {
+    photoWork: '/jpg/portfolio/task2.png',
+    url: 'https://podiatry-victoria.vercel.app/',
+  },
+  {
+    photoWork: '/jpg/portfolio/task3.png',
     url: 'https://podiatry-victoria.vercel.app/',
   },
   // ['/jpg/portfolio/task2.png', 20, 40],
@@ -36,6 +44,9 @@ const food: any = [
 ]
 
 const CardWorks = () => {
+
+  // const hue = (h: number) => `hsl(${h}, 100%, 50%)`
+  // const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`
   return (
     <motion.div
       className='card-container'
