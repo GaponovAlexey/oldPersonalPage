@@ -5,8 +5,8 @@ import WorkList from '../components/WorkList'
 const WorkShop: NextPage = () => {
   const { scrollY } = useViewportScroll()
   const offsetY = [0, 300]
-  
-  const marginTop = useTransform(scrollY, offsetY, offsetY)
+
+  const marginTop = useTransform(scrollY, [0, 300], offsetY)
   return (
     <div>
       <div className='sticky top-0 w-full '>

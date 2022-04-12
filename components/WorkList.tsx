@@ -5,10 +5,10 @@ const WorkList = ({ offsetY, scrollY }: any) => {
   // const
   const height = useTransform(scrollY, offsetY, heightSize)
   const fontSize = useTransform(scrollY, offsetY, fontsSize)
-  const pOpasity = useTransform(scrollY, [40, 220], [1, 0])
+  const pOpasity = useTransform(scrollY, [40, 320], [1, 0])
 
   return (
-    <motion.div style={{ height, fontSize }}>
+    <motion.div style={{ height, fontSize, opacity: pOpasity }}>
       <div className='grid grid-cols-3 p-2'>
         <div>
           <li>React</li>
