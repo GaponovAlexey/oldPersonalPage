@@ -1,4 +1,5 @@
 import { motion, useTransform } from 'framer-motion'
+import Link from 'next/link'
 
 import s from '../styles/Home.module.scss'
 
@@ -15,15 +16,19 @@ const WorkList = ({ offsetY, scrollY }: any) => {
       <ul className={s.workList}>
         <li>All designs</li>
         <div>
-          <li>React</li>
-          <li>NextJs</li>
+          <li>React/NextJs</li>
+          {/* <li></li> */}
         </div>
         <div>
           <li>SPA</li>
           <li>SRM</li>
           <li>e-commerce</li>
+          <Link href='/task'>
+            <li>Task Job</li>
+          </Link>
         </div>
       </ul>
+      <h1>All works</h1>
     </motion.div>
   )
 }
