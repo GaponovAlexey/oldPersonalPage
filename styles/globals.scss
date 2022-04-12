@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './module/worksCard.scss';
+
 html,
 body {
   font-family: 'Raleway', sans-serif;
   @apply bg-black text-white;
 }
+

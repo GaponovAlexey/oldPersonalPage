@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
 import WorkList from '../components/WorkList'
+import CardWorks from '../components/CardWorks'
 
 const WorkShop: NextPage = () => {
   const { scrollY } = useViewportScroll()
@@ -13,13 +14,7 @@ const WorkShop: NextPage = () => {
         <WorkList offsetY={offsetY} scrollY={scrollY} />
       </div>
       <motion.div style={{ marginTop }}>
-        <div className='h-[560px] bg-slate-300'>block</div>
-      </motion.div>
-      <motion.div style={{ marginTop }}>
-        <div className='h-[560px] bg-slate-300'>block</div>
-      </motion.div>
-      <motion.div style={{ marginTop }}>
-        <div className='h-[560px] bg-slate-300'>block</div>
+        <CardWorks />
       </motion.div>
     </div>
   )
