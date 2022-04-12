@@ -35,22 +35,22 @@ const Card = ({ emoji, hueA, hueB }: Props) => {
       viewport={{ once: true, amount: 0.8 }}
     >
       <div className='splash' style={{ background }} />
-      <motion.div className='card' variants={cardVariants}>
-        {emoji}
+      <motion.div  className='card' variants={cardVariants}>
+        <img src={emoji} alt="img" />
       </motion.div>
     </motion.div>
   )
 }
 
 const food: any = [
-  ['🍅', 340, 10],
-  ['🍊', 20, 40],
-  ['🍋', 60, 90],
-  ['🍐', 80, 120],
-  ['🍏', 100, 140],
-  ['🫐', 205, 245],
-  ['🍆', 260, 290],
-  ['🍇', 290, 320],
+  ['/jpg/portfolio/port1.png',170, 299],
+  ['/jpg/portfolio/port1.png', 20, 40],
+  // ['🍋', 60, 90],
+  // ['🍐', 80, 120],
+  // ['🍏', 100, 140],
+  // ['🫐', 205, 245],
+  // ['🍆', 260, 290],
+  // ['🍇', 290, 320],
 ]
 
 const  CardWorks = () => {

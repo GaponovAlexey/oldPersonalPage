@@ -32,18 +32,23 @@
   }
   .about {
     @apply flex;
-    > div  {
+    > div {
       @apply lg:flex-wrap;
-        > strong {
-          @apply  text-gray-400;
-          > ul {  
-            @apply ml-10 ;
+      > strong {
+        @apply text-gray-400;
+        > ul {
+          @apply ml-10;
         }
         text {
-          @apply text-gray-600 ;
+          @apply text-gray-600;
         }
       }
     }
-  
+  }
 }
+.workList {
+  @apply grid grid-cols-3 p-2 cursor-pointer ;
+  li {
+    @apply hover:text-teal-300;
+  }
 }
