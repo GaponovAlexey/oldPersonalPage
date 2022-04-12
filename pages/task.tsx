@@ -4,21 +4,33 @@ const TaskJob: NextPage = () => {
   const works = [
     {
       id: 1,
-      title: 'album - jsonplaceholder',
+      title: 'Podiatry',
+      urlSite: 'https://podiatry-victoria.vercel.app/',
+      urlRepo: 'https://github.com/GaponovAlexey/victoria-podiatry',
+    },
+    {
+      id: 2,
+      title: 'album - JSONPlaceholder',
       urlSite: 'https://gaponovalexey.github.io/album-homework/',
       urlRepo: 'https://github.com/GaponovAlexey/album-homework',
     },
     {
-      id: 2,
-      title: 'kulinar - recepte',
+      id: 3,
+      title: 'How to Eat',
       urlSite: 'https://gaponovalexey.github.io/prod3/',
       urlRepo: 'https://github.com/GaponovAlexey/prod3/',
     },
     {
-      id: 3,
-      title: 'shop - fortnite',
+      id: 4,
+      title: 'shop - Fortnite',
       urlSite: 'https://gaponovalexey.github.io/react-demotwo/',
       urlRepo: 'https://github.com/gaponovalexey/react-demotwo/',
+    },
+    {
+      id: 5,
+      title: 'easy - todo',
+      urlSite: 'https://learn-todo.vercel.app/',
+      urlRepo: 'https://github.com/GaponovAlexey/learn-todo',
     },
   ]
 
