@@ -1,107 +1,174 @@
+import { motion } from 'framer-motion'
 import s from '../styles/Home.module.scss'
 const Skills = () => {
+  const frontend = [
+    { title: 'JS | TS' },
+    { title: 'HTML | CSS | Sass' },
+    { title: 'React | NextJs' },
+    { title: 'React Hooks' },
+    { title: 'React Context API' },
+    { title: 'Redux Toolkit' },
+    { title: 'Redux Saga' },
+    { title: 'Redux Persist' },
+    { title: 'RTK Query' },
+    { title: 'React Router6' },
+    { title: 'React Transition Group' },
+    { title: 'React Hook Form' },
+    { title: 'Slick' },
+    { title: 'PassportJs' },
+    { title: 'TailwindCSS' },
+    { title: 'Styled-Components' },
+    { title: 'Emotion' },
+  ]
+
+  const backend = [
+    { title: 'NodeJS' },
+    { title: 'Express' },
+    { title: 'RESTful API' },
+    { title: 'SQL' },
+    { title: 'PostgreSQL' },
+    { title: 'Firebase' },
+    { title: 'Supabase' },
+    { title: 'MongoDB' },
+    { title: 'Mongoose' },
+    { title: 'GraphQL' },
+    { title: 'Apollo Client' },
+    { title: 'Apollo Server' },
+  ]
+
+  const uiux = [
+    { title: 'Figma' },
+    { title: 'Framer motion' },
+    { title: 'PixiJS' },
+    { title: 'Materialize' },
+    { title: 'Ant Design of React' },
+    { title: 'Material-UI' },
+    { title: 'Material Design 3' },
+    { title: 'React-Vis' },
+    { title: 'UIkit' },
+    { title: 'Chart.js' },
+    { title: 'React-Motion' },
+    { title: 'React Materialize' },
+    { title: 'React Bootstrap' },
+    { title: 'React-Spring' },
+    { title: 'Tailblocks' },
+  ]
+
+  const analytics = [
+    { title: 'Python' },
+    { title: 'Amplitude' },
+    { title: 'Tableau' },
+    { title: 'Power BL' },
+    { title: 'Highcharts' },
+    { title: 'GoJs' },
+    { title: 'Google Excel' },
+    { title: 'Pandas' },
+    { title: 'Numpy' },
+    { title: 'Matplotlib' },
+    { title: 'Seaborn' },
+    { title: 'Scikit-learn' },
+    { title: 'Google Analytics' },
+    { title: 'Google Tag Manager' },
+    { title: 'Google Ads' },
+    { title: 'GoJs' },
+  ]
+  const Other = [
+    { title: 'npm | yarn' },
+    { title: 'GitHub Pages' },
+    { title: 'Git' },
+    { title: 'Webpack' },
+    { title: 'Gulp' },
+    { title: 'Laravel Mix' },
+    { title: 'Babel' },
+    { title: 'ESLint' },
+    { title: 'Prettier' },
+    { title: 'Jest' },
+    { title: '1С' },
+    { title: 'Bitrix24' },
+    { title: 'Wordpress' },
+    { title: 'Jira' },
+    { title: 'Confluence' },
+    { title: 'Trello' },
+    { title: 'Slack' },
+    { title: 'EditorConfig' },
+    { title: 'Json2ts' },
+    { title: 'Cors' },
+    { title: 'Codepen' },
+    { title: 'Codesandbox' },
+    { title: 'Codesandbox' },
+    { title: 'svgomg' },
+    { title: 'imagecompressor' },
+    { title: 'Autoprefixer CSS' },
+    { title: 'CSS Minifier' },
+    { title: 'Tabmine ' },
+  ]
   return (
     <div>
       <ul className={s.skills}>
         <div>
           <h2>Frontend</h2>
-          <li>JS | TS</li>
-          <li>HTML | CSS | Sass</li>
-          <li>React</li>
-          <li>React Hooks</li>
-          <li>React Context API</li>
-          <li>Redux</li>
-          <li>Redux Toolkit</li>
-          <li>Redux Saga</li>
-          <li>Redux Persist </li>
-          <li>RTK Query</li>
-          <li>React Router6</li>
-          <li>React Transition Group</li>
-          <li>React Hook Form</li>
-          <li>Slick</li>
-          <li>PassportJs</li>
-          <li>TailwindCSS</li>
-          <li>Styled-Components</li>
-          <li>Emotion</li>
+          {frontend.map((el, i) => (
+            <motion.li
+              key={i}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+            >
+              {el.title}
+            </motion.li>
+          ))}
         </div>
         <div>
           <h2>UX / UI</h2>
-          <li>Figma</li>
-
-          <li>Framer motion</li>
-          <li>PixiJS</li>
-          <li>Materialize</li>
-          <li>Ant Design of React</li>
-          <li>Material-UI</li>
-          <li>Material Design 3</li>
-          <li>React-Vis</li>
-          <li>UIkit</li>
-          <li>Chart.js</li>
-          <li>React-Motion</li>
-          <li>React Materialize</li>
-          <li>React Bootstrap</li>
-          <li>React-Spring</li>
-          <li>Tailblocks</li>
+          {uiux.map((el, i) => (
+            <motion.li
+              key={i}
+              initial={{ opacity: 0, y: +20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+            >
+              {el.title}
+            </motion.li>
+          ))}
         </div>
         <div>
           <h2>Backend</h2>
-          <li>NodeJs</li>
-          <li>NextJs</li>
-          <li>Express</li>
-          <li>RESTful API</li>
-          <li>GraphQL</li>
-          <li>SQL</li>
-          <li>MongoDB</li>
-          <li>PostgreSQL</li>
-          <li>Firebase </li>
-          <li>Supabase</li>
+          {backend.map((el, i) => (
+            <motion.li
+              key={i}
+              initial={{ opacity: 0, y: +20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+            >
+              {el.title}
+            </motion.li>
+          ))}
         </div>
         <div>
           <h2>Analytics</h2>
-          <li>Python</li>
-          <li>Amplitude</li>
-          <li>Tableau</li>
-          <li>Power BL</li>
-          <li>Highcharts </li>
-          <li>GoJs</li>
-          <li>Google Excel</li>
-          <li>Pandas</li>
-          <li>Numpy</li>
-          <li>Matplotlib</li>
-          <li>Seaborn</li>
-          <li>Scikit-learn</li>
-          <li>Google Analytics</li>
-          <li>Google Tag Manager</li>
-          <li>Google Ads</li>
-          <li>GoJs</li>
+          {analytics.map((el, i) => (
+            <motion.li
+              key={i}
+              initial={{ opacity: 0, y: +20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.08 }}
+            >
+              {el.title}
+            </motion.li>
+          ))}
         </div>
         <div>
           <h2>Other</h2>
-          <li>npm | yarn</li>
-          <li>GitHub Pages</li>
-          <li>Git</li>
-          <li>Webpack</li>
-          <li>Gulp</li>
-          <li>Laravel Mix</li>
-          <li>Babel</li>
-          <li>ESLint</li>
-          <li>Prettier</li>
-          <li>Jest</li>
-          <li>1С</li>
-          <li>Bitrix24</li>
-          <li>Wordpress</li>
-          <li>Jira</li>
-          <li>Confluence</li>
-          <li>Trello</li>
-          <li>Slack</li>
-          <li>EditorConfig</li>
-          <li>Json2ts</li>
-          <li>Codepen</li>
-          <li>Codesandbox</li>
-          <li>svgomg</li>
-          <li>imagecompressor</li>
-          <li>Autoprefixer CSS</li>
-          <li>CSS Minifier</li>
+          {Other.map((el, i) => (
+            <motion.li
+              key={i}
+              initial={{ opacity: 0, y: +20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.06 }}
+            >
+              {el.title}
+            </motion.li>
+          ))}
         </div>
       </ul>
     </div>
