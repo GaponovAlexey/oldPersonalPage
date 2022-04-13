@@ -6,16 +6,42 @@ const Skills = () => {
         <div>
           <h2>Frontend</h2>
           <li>JS | TS</li>
-          <li>HTML | CSS</li>
+          <li>HTML | CSS | Sass</li>
           <li>React</li>
+          <li>React Hooks</li>
           <li>React Context API</li>
+          <li>Redux</li>
           <li>Redux Toolkit</li>
-          <li>RTK Query</li>
           <li>Redux Saga</li>
           <li>Redux Persist </li>
-          <li>Sass</li>
+          <li>RTK Query</li>
+          <li>React Router6</li>
+          <li>React Transition Group</li>
+          <li>React Hook Form</li>
+          <li>Slick</li>
+          <li>PassportJs</li>
+          <li>TailwindCSS</li>
           <li>Styled-Components</li>
-          <li></li>
+          <li>Emotion</li>
+        </div>
+        <div>
+          <h2>UX / UI</h2>
+          <li>Figma</li>
+          
+          <li>Framer motion</li>
+          <li>PixiJS</li>
+          <li>Materialize</li>
+          <li>Ant Design of React</li>
+          <li>Material-UI</li>
+          <li>Material Design 3</li>
+          <li>React-Vis</li>
+          <li>UIkit</li>
+          <li>Chart.js</li>
+          <li>React-Motion</li>
+          <li>React Materialize</li>
+          <li>React Bootstrap</li>
+          <li>React-Spring</li>
+          <li>Tailblocks</li>
         </div>
         <div>
           <h2>Backend</h2>
@@ -31,15 +57,14 @@ const Skills = () => {
           <li>Supabase</li>
         </div>
         <div>
-          <h2>Algorithms</h2>
-        </div>
-        <div>
           <h2>Analytics</h2>
+          <li>Python</li>
           <li>Amplitude</li>
           <li>Tableau</li>
           <li>Power BL</li>
+          <li>Highcharts </li>
+          <li>GoJs</li>
           <li>Google Excel</li>
-          <li>Python</li>
           <li>Pandas</li>
           <li>Numpy</li>
           <li>Matplotlib</li>
@@ -48,6 +73,7 @@ const Skills = () => {
           <li>Google Analytics</li>
           <li>Google Tag Manager</li>
           <li>Google Ads</li>
+          <li>GoJs</li>
         </div>
         <div>
           <h2>Other</h2>
@@ -68,6 +94,10 @@ const Skills = () => {
           <li>Confluence</li>
           <li>Trello</li>
           <li>Slack</li>
+          <li>EditorConfig</li>
+          <li>json2ts</li>
+          <li>Codepen</li>
+          <li>Codesandbox</li>
         </div>
       </ul>
     </div>
