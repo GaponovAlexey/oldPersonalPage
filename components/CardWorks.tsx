@@ -57,8 +57,9 @@ const Card = ({ myIMG, myURL, hueA, hueB }: any) => {
 
 const food: any = [
   ['/jpg/portfolio/port1.png', 'https://podiatry-victoria.vercel.app/', 160, 190],
-  ['/jpg/portfolio/task2.png', 'https://podiatry-victoria.vercel.app/', 200, 170],
-  ['/jpg/portfolio/task3.png', 'https://podiatry-victoria.vercel.app/', 390, 190],
+  ['/jpg/portfolio/work4.png', 'https://portfolio-2502.vercel.app/', 22, 30],
+  ['/jpg/portfolio/task2.png', 'https://gaponovalexey.github.io/prod3/', 200, 170],
+  ['/jpg/portfolio/task3.png', 'https://gaponovalexey.github.io/react-demotwo/', 390, 190],
   
 ]
 
