@@ -55,4 +55,10 @@
 
 .skills {
   @apply flex justify-between;
+  li {
+    @apply text-gray-400;
+  }
+  h2 {
+    @apply text-yellow-100;
+  }
 }
