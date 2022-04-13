@@ -1,4 +1,4 @@
-const skills = {
+export const skills = {
   frontend: [
     { title: 'JS | TS' },
     { title: 'HTML | CSS | Sass' },

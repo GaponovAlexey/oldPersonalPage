@@ -1,19 +1,20 @@
 import { motion } from 'framer-motion'
 import s from '../styles/Home.module.scss'
-// export const getStaticProps = async () => {
-//   const response = await fetch()
-//   const data = await response.json()
-//   if(!data) {return {notFound:true}
-//   return {props: { contacts: data },}
-// }
+import { Data } from '../Types/Types'
 
-const Skills = ({ skills }: any) => {
+export const getServerSideProps = async () => {
+  const response = await fetch('http://localhost:3000/api/data')
+  const data = await response.json()
+  return { props: { skills: data } }
+}
+
+const Skills = ({ skills }: Data) => {
   return (
     <div>
-      <ul className={s.skills}>
+      <ul className={s.skillsStyle}>
         <div>
           <h2>Frontend</h2>
-          {skills.frontend.map((el, i) => (
+          {skills?.frontend.map((el, i) => (
             <motion.li
               key={i}
               initial={{ opacity: 0, y: -20 }}
@@ -26,7 +27,7 @@ const Skills = ({ skills }: any) => {
         </div>
         <div>
           <h2>UX / UI</h2>
-          {skills.uiux.map((el, i) => (
+          {skills?.uiux.map((el, i) => (
             <motion.li
               key={i}
               initial={{ opacity: 0, y: +20 }}
@@ -39,7 +40,7 @@ const Skills = ({ skills }: any) => {
         </div>
         <div>
           <h2>Backend</h2>
-          {skills.backend.map((el, i) => (
+          {skills?.backend.map((el, i) => (
             <motion.li
               key={i}
               initial={{ opacity: 0, y: +20 }}
@@ -52,7 +53,7 @@ const Skills = ({ skills }: any) => {
         </div>
         <div>
           <h2>Analytics</h2>
-          {skills.analytics.map((el, i) => (
+          {skills?.analytics.map((el, i) => (
             <motion.li
               key={i}
               initial={{ opacity: 0, y: +20 }}
@@ -65,7 +66,7 @@ const Skills = ({ skills }: any) => {
         </div>
         <div>
           <h2>Other</h2>
-          {skills.Other.map((el, i) => (
+          {skills?.Other.map((el: any, i: any) => (
             <motion.li
               key={i}
               initial={{ opacity: 0, y: +20 }}
