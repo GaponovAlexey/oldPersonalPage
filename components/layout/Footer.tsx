@@ -4,7 +4,7 @@ const Footer = () => {
     <div className={s.footer}>
       <a href='https://t.me/g_alexey_ur'>t.me</a>
       <h4>created by Alexey Gaponov</h4>
-      <p>alexei.gaponov@gmail.com <br/> ©2022 portfolio website</p>
+      <p> ©2022 portfolio website | alexei.gaponov@gmail.com</p>
       
     </div>
   )

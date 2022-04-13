@@ -47,7 +47,7 @@
   }
 }
 .workList {
-  @apply grid grid-cols-3 p-2 cursor-pointer;
+  @apply flex justify-between p-2 cursor-pointer;
   li {
     @apply hover:text-teal-300;
   }

@@ -14,21 +14,14 @@ const WorkList = ({ offsetY, scrollY }: any) => {
   return (
     <motion.div style={{ height, fontSize, opacity: pOpasity }}>
       <ul className={s.workList}>
-        <li>All designs</li>
-        <div>
-          <li>React/NextJs</li>
-          {/* <li></li> */}
-        </div>
-        <div>
-          <li>SPA</li>
-          <li>SRM</li>
-          <li>e-commerce</li>
-          <Link href='/task'>
-            <li>Task Job</li>
-          </Link>
-        </div>
+        <li>All designs &#8595;</li>
+        <li>SPA</li>
+        <li>SRM</li>
+        <li>e-commerce</li>
+        <Link href='/task'>
+          <li>List Job</li>
+        </Link>
       </ul>
-      <h1>All works</h1>
     </motion.div>
   )
 }
