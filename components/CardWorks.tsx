@@ -1,13 +1,6 @@
 import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 
-// interface Props {
-//   emoji: string
-//   hueA: number
-//   hueB: number
-//   urls: string
-// }
-
 const cardVariants: Variants = {
   offscreen: {
     y: 300,
@@ -23,8 +16,7 @@ const cardVariants: Variants = {
   },
 }
 
-
-const food: any = [
+const foods: any = [
   {
     photoWork: '/jpg/portfolio/port1.png',
     url: 'https://podiatry-victoria.vercel.app/',
@@ -43,10 +35,9 @@ const food: any = [
   // ['/jpg/portfolio/task3.png', 60, 90],
 ]
 
-const CardWorks = () => {
-
-  // const hue = (h: number) => `hsl(${h}, 100%, 50%)`
-  // const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`
+const Card = ({ myIMG, myURL, hueA, hueB }: any) => {
+  const hue = (h: number) => `hsl(${h}, 100%, 50%)`
+  const background = `linear-gradient(601deg, ${hue(hueA)}, ${hue(hueB)})`
   return (
     <motion.div
       className='card-container'
@@ -54,16 +45,27 @@ const CardWorks = () => {
       whileInView='onscreen'
       viewport={{ once: true, amount: 0.8 }}
     >
-      <div className='splash' style={{ background: 'gray' }} />
+      <div className='splash' style={{ background }} />
       <motion.div className='card' variants={cardVariants}>
-        {food.map((el) => {
-          return <a href={el.url}>
-            <img src={el.photoWork} alt='img' />
-          </a>
-        })}
+        <a href={myURL}>
+          <img src={myIMG} alt='img' />
+        </a>
       </motion.div>
     </motion.div>
   )
+}
+
+const food: any = [
+  ['/jpg/portfolio/port1.png', 'https://podiatry-victoria.vercel.app/', 160, 190],
+  ['/jpg/portfolio/task2.png', 'https://podiatry-victoria.vercel.app/', 200, 170],
+  ['/jpg/portfolio/task3.png', 'https://podiatry-victoria.vercel.app/', 390, 190],
+  
+]
+
+const CardWorks = () => {
+  return food.map(([myIMG, myURL, hueA, hueB]: any) => (
+    <Card myIMG={myIMG} myURL={myURL} key={myIMG} hueA={hueA} hueB={hueB} />
+  ))
 }
 
 export default CardWorks
