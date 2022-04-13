@@ -1,23 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-
-type Data = {
-  frontend: {
-    title: string
-  }[]
-  backend: {
-    title: string
-  }[]
-  uiux: {
-    title: string
-  }[]
-  analytics: {
-    title: string
-  }[]
-  Other: {
-    title: string
-  }[]
-}
-
 const skills = {
   frontend: [
     { title: 'JS | TS' },
@@ -117,11 +97,4 @@ const skills = {
     { title: 'CSS Minifier' },
     { title: 'Tabmine ' },
   ],
-}
-
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json(skills)
 }
