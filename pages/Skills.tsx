@@ -27,7 +27,7 @@ const Skills = () => {
         <div>
           <h2>UX / UI</h2>
           <li>Figma</li>
-          
+
           <li>Framer motion</li>
           <li>PixiJS</li>
           <li>Materialize</li>
@@ -95,9 +95,13 @@ const Skills = () => {
           <li>Trello</li>
           <li>Slack</li>
           <li>EditorConfig</li>
-          <li>json2ts</li>
+          <li>Json2ts</li>
           <li>Codepen</li>
           <li>Codesandbox</li>
+          <li>svgomg</li>
+          <li>imagecompressor</li>
+          <li>Autoprefixer CSS</li>
+          <li>CSS Minifier</li>
         </div>
       </ul>
     </div>
