@@ -13,23 +13,22 @@ const Skills = () => {
           <li>RTK Query</li>
           <li>Redux Saga</li>
           <li>Redux Persist </li>
-          <li>Styled-Components</li>
           <li>Sass</li>
-          <li>Git</li>
-          <li>GitHub Pages</li>
-          <li>Webpack</li>
-          <li>Babel</li>
+          <li>Styled-Components</li>
+          <li></li>
         </div>
         <div>
           <h2>Backend</h2>
-          <li>JS | TS</li>
           <li>NodeJs</li>
           <li>NextJs</li>
           <li>Express</li>
+          <li>RESTful API</li>
+          <li>GraphQL</li>
           <li>SQL</li>
           <li>MongoDB</li>
           <li>PostgreSQL</li>
           <li>Firebase </li>
+          <li>Supabase</li>
         </div>
         <div>
           <h2>Algorithms</h2>
@@ -52,6 +51,23 @@ const Skills = () => {
         </div>
         <div>
           <h2>Other</h2>
+          <li>npm | yarn</li>
+          <li>GitHub Pages</li>
+          <li>Git</li>
+          <li>Webpack</li>
+          <li>Gulp</li>
+          <li>Laravel Mix</li>
+          <li>Babel</li>
+          <li>ESLint</li>
+          <li>Prettier</li>
+          <li>Jest</li>
+          <li>1С</li>
+          <li>Bitrix24</li>
+          <li>Wordpress</li>
+          <li>Jira</li>
+          <li>Confluence</li>
+          <li>Trello</li>
+          <li>Slack</li>
         </div>
       </ul>
     </div>
