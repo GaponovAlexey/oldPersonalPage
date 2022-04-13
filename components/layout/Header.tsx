@@ -34,7 +34,7 @@ const Header = () => {
             }}
             animate={{ rotate: 2 }}
           >
-            contact me
+            <a href='https://t.me/g_alexey_ur'>contact me</a>
           </motion.li>
         </ul>
       </nav>
