@@ -1,8 +1,8 @@
+import s from '../styles/Home.module.scss'
 const Skills = () => {
   return (
     <div>
-      {/* <h1>Skills</h1> */}
-      <ul className='flex justify-between'>
+      <ul className={s.skills}>
         <div>
           <h2>Frontend</h2>
           <li>JS | TS</li>

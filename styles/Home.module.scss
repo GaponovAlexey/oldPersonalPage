@@ -47,8 +47,12 @@
   }
 }
 .workList {
-  @apply grid grid-cols-3 p-2 cursor-pointer ;
+  @apply grid grid-cols-3 p-2 cursor-pointer;
   li {
     @apply hover:text-teal-300;
   }
+}
+
+.skills {
+  @apply flex justify-between;
 }
