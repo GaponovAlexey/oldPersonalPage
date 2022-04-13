@@ -15,7 +15,9 @@ const Header = () => {
           rel='stylesheet'
         ></link>
       </Head>
-      <h1>Personal</h1>
+      <h1>
+        <Link href='/'>Personal</Link>
+      </h1>
       <nav>
         <ul>
           <Link href='/'>

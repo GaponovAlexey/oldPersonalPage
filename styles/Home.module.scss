@@ -1,7 +1,7 @@
 .layout {
-  @apply w-9/12 m-auto max-w-[1024px];
+  @apply w-9/12 m-auto max-w-[1024px] ;
   .child {
-    @apply min-h-[80vh] max-h-full;
+    @apply min-h-[85vh] max-h-full;
   }
 }
 
@@ -20,7 +20,7 @@
 }
 
 .footer {
-  @apply text-center text-gray-500;
+  @apply  bottom-0 text-center text-gray-500;
   > a {
     @apply text-blue-200;
   }
