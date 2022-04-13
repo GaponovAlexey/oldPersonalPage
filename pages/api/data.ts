@@ -3,6 +3,7 @@ import { Data } from '../../Types/Types'
 import { skills } from '../../components/data/data.js'
 
 export default function data(
+  
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
