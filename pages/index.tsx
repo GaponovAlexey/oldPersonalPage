@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import s from '../styles/Home.module.scss'
 import Testing from './testing.tsx'
+import AutoDispose from '../components/animation/box'
 const base = [
   { title: "Hi there 👋, I'm Alexey'" },
   { title: 'I am a Web Developer' },
@@ -24,7 +25,7 @@ const about = [
 const Home = () => {
   return (
     <>
-      <div className='fixed z-[1] bottom-0 right-0'>
+      <div className='fixed z-[1] bottom-0 left-0'>
         <Testing />
       </div>
       <div className={s.main}>

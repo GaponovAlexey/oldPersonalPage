@@ -303,6 +303,15 @@
     suspend-react "^0.0.8"
     zustand "^3.7.1"
 
+"@react-three/postprocessing@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@react-three/postprocessing/-/postprocessing-2.3.2.tgz#14ffc56b0153d2cbcb6615ae5a943d6786c5b868"
+  integrity sha512-e1veVao9XR3BP/J6OdvbR7yQq7d3lpOQuKvSQJ9LWLhPziBzHeRazU63cIwf5Dh4qy0TuxswmgWKxRn8Sxp79Q==
+  dependencies:
+    postprocessing "6.26.3"
+    react-merge-refs "^1.1.0"
+    three-stdlib "^2.8.11"
+
 "@rushstack/eslint-patch@1.0.8":
   version "1.0.8"
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.0.8.tgz"
@@ -1982,6 +1991,11 @@ postcss@^8.4.12, postcss@^8.4.6:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+postprocessing@6.26.3:
+  version "6.26.3"
+  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.26.3.tgz#456922499e13e02352b3b6b14881ca8186e8a96a"
+  integrity sha512-f9VMDQSLngrdJByPjza4pNHZWoEnGFdxj6GsgqGd2+RM3PYFTCZapgpX9W/FspRUg6Is38vkUfjvLxWyfBHbhQ==
+
 potpack@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/potpack/-/potpack-1.0.2.tgz#23b99e64eb74f5741ffe7656b5b5c4ddce8dfc14"
@@ -2015,6 +2029,11 @@ quick-lru@^5.1.1:
   version "5.1.1"
   resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
+
+random-words@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/random-words/-/random-words-1.1.2.tgz#edd0aa531cafc9d1499cb06f7314ac93a9086496"
+  integrity sha512-GwgC+Yu+D5/044grf2QqaYk3ZrQip7yfgvkj/6bJ3H3B3KrE7qoNPbWaYd06hrigqAkrPzNVEpRlnBaNx4bDuA==
 
 react-composer@^5.0.2:
   version "5.0.2"
@@ -2329,7 +2348,7 @@ three-mesh-bvh@^0.5.7:
   resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.5.9.tgz#bfa51d38e0fd221d8c2822ec0202c6521b418533"
   integrity sha512-WKvJtM2HXoKOxe4XwZFuPYp885XYEh3DasoUIeGyynnTh++8ZUi2KCI1zganvtc9ob67mcBulXVBhdaC2BqBnQ==
 
-three-stdlib@^2.8.12:
+three-stdlib@^2.8.11, three-stdlib@^2.8.12:
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.9.1.tgz#300abf6cf12ab388e515fd8572217288dffe4736"
   integrity sha512-e+Hyd47ssVTy2UzUfmaccB7m30qITVMdvGs/QypeGdJa3uwhw1zR9jO/ce61S65Omiy/oGDMWG8dJIZxyQ7u8w==

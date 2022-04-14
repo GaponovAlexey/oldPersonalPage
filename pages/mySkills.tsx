@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import AutoDispose from '../components/animation/box'
 import s from '../styles/Home.module.scss'
 import { Data } from '../Types/Types'
 
@@ -11,6 +12,9 @@ export const getServerSideProps = async () => {
 const Skills = ({ skills }: Data) => {
   return (
     <div>
+      <div className='fixed z-[1] bottom-0 left-0'>
+        <AutoDispose />
+      </div>
       <ul className={s.skillsStyle}>
         <div>
           <h2>Frontend</h2>
