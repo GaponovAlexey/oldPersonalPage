@@ -20,9 +20,6 @@ const Header = () => {
       </h1>
       <nav>
         <ul>
-          {/* <Link href='/testing'>
-            <li>Testing</li>
-          </Link> */}
           <Link href='/'>
             <li>Home</li>
           </Link>
@@ -39,7 +36,7 @@ const Header = () => {
             }}
             animate={{ rotate: 2 }}
           >
-            <a href='https://t.me/g_alexey_ur'>contact me</a>
+            <Link href='https://t.me/g_alexey_ur'>contact me</Link>
           </motion.li>
         </ul>
       </nav>

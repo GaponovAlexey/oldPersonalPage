@@ -24,11 +24,10 @@ const about = [
 const Home = () => {
   return (
     <>
-      
       <div className={s.main}>
         <strong>
           <motion.div
-            initial={{ x: -1000 }}
+            initial={{ x: -200 }}
             animate={{ x: 0 }}
             transition={{
               type: 'tween',
@@ -41,9 +40,9 @@ const Home = () => {
 
         <div className={s.about}>
           <motion.div
-            transition={{ type: 'tween' }}
-            initial={{ opacity: 0, x: -300 }}
-            animate={{ opacity: 1, x: 0 }}
+            // transition={{ type: 'tween' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
           >
             <Image src='/jpg/1.png' width='455%' height='620%' />
           </motion.div>
@@ -53,7 +52,7 @@ const Home = () => {
                 {base.map((el, i) => (
                   <motion.li
                     key={i}
-                    initial={{ opacity: 0, x: +300 }}
+                    initial={{ opacity: 0, x: +50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ type: 'tween', delay: i * 0.04 }}
                   >
@@ -69,7 +68,7 @@ const Home = () => {
                 {about.map((el, i) => (
                   <motion.li
                     key={i}
-                    initial={{ opacity: 0, y: +300 }}
+                    initial={{ opacity: 0, y: +50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ type: 'tween', delay: i * 0.04 }}
                   >
