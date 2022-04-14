@@ -40,9 +40,8 @@ const Home = () => {
 
         <div className={s.about}>
           <motion.div
-            // transition={{ type: 'tween' }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
           >
             <Image src='/jpg/1.png' width='455%' height='620%' />
           </motion.div>
