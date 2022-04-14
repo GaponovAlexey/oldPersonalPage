@@ -16,9 +16,9 @@
     @apply flex flex-wrap;
     > li {
       @media (max-width: 768px) {
-        @apply sticky text-center;
+        @apply text-xl;
       }
-      @apply pl-10 first:pl-0 hover:text-pink-500 cursor-pointer
+      @apply pl-24 md:pl-10 first:pl-0 hover:text-pink-500 cursor-pointer
        last:text-blue-400 pb-5;
     }
   }
