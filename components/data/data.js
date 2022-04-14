@@ -37,6 +37,7 @@ export const skills = {
     { title: 'Framer motion' },
     { title: 'PixiJS' },
     { title: 'React-Three-fiber' },
+    { title: 'Blender 3D' },
     { title: 'Materialize' },
     { title: 'Ant Design of React' },
     { title: 'Material-UI' },
