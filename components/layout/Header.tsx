@@ -29,7 +29,7 @@ const Header = () => {
           <Link href='/workShop'>
             <li>Workshop</li>
           </Link>
-          <Link href='/attainments'>
+          <Link href='/lore'>
             <li>Skills</li>
           </Link>
           <motion.li

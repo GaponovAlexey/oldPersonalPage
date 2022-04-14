@@ -9,7 +9,7 @@ export const getStaticProps = async () => {
   return { props: { skills: JSON.parse(JSON.stringify(data)) } }
 }
 
-const Attainments = ({ skills }: Data) => {
+const Lore = ({ skills }: Data) => {
   return (
     <div>
       <div className='fixed z-[1] bottom-0 left-0'>
@@ -86,4 +86,4 @@ const Attainments = ({ skills }: Data) => {
   )
 }
 
-export default Attainments
+export default Lore
