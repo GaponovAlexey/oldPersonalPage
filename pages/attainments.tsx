@@ -3,7 +3,7 @@ import AutoDispose from '../components/animation/box'
 import s from '../styles/Home.module.scss'
 import { Data } from '../Types/Types'
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch('http://localhost:3000/api/data')
   const data = await response.json()
   return { props: { skills: JSON.parse(JSON.stringify(data)) } }
