@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import AutoDispose from '../components/animation/box'
+// import AutoDispose from '../components/animation/box'
 import s from '../styles/Home.module.scss'
 import { Data } from '../Types/Types'
 
@@ -13,7 +13,7 @@ const Skills = ({ skills }: Data) => {
   return (
     <div>
       <div className='fixed z-[1] bottom-0 left-0'>
-        <AutoDispose />
+        {/* <AutoDispose /> */}
       </div>
       <ul className={s.skillsStyle}>
         <div>
