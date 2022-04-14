@@ -28,7 +28,7 @@
 }
 
 .footer {
-  @apply bottom-0 text-center text-gray-500;
+  @apply bottom-0 text-center text-gray-300;
   > a {
     @apply text-blue-200;
   }
@@ -42,12 +42,12 @@
     @apply flex flex-wrap md:flex-nowrap;
     > div {
       > strong {
-        @apply text-gray-400;
+        @apply text-gray-300;
         > ul {
           @apply md:ml-10;
         }
         text {
-          @apply text-gray-600;
+          @apply text-gray-300;
         }
       }
     }
