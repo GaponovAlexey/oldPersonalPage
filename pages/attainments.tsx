@@ -9,7 +9,7 @@ export const getServerSideProps = async () => {
   return { props: { skills: JSON.parse(JSON.stringify(data)) } }
 }
 
-const MySkills = ({ skills }: Data) => {
+const Attainments = ({ skills }: Data) => {
   return (
     <div>
       <div className='fixed z-[1] bottom-0 left-0'>
@@ -86,4 +86,4 @@ const MySkills = ({ skills }: Data) => {
   )
 }
 
-export default MySkills
+export default Attainments
