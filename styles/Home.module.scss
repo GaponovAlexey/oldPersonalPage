@@ -18,8 +18,8 @@
       @media (max-width: 768px) {
         @apply sticky text-center;
       }
-      @apply pl-10 first:pl-0 hover:text-red-500 cursor-pointer
-       last:text-blue-500 pb-5;
+      @apply pl-10 first:pl-0 hover:text-pink-500 cursor-pointer
+       last:text-blue-400 pb-5;
     }
   }
   > h1 {
@@ -61,7 +61,7 @@
 }
 
 .skillsStyle {
-  @apply flex justify-between;
+  @apply flex flex-wrap justify-between;
   li {
     @apply text-gray-400;
   }

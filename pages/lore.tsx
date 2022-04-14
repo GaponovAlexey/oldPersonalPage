@@ -11,10 +11,7 @@ export const getStaticProps = async () => {
 
 const Lore = ({ skills }: Data) => {
   return (
-    <div>
-      <div className='fixed z-[1] bottom-0 left-0'>
-        <AutoDispose />
-      </div>
+    <div className='relative'>
       <ul className={s.skillsStyle}>
         <div>
           <h2>Frontend</h2>
@@ -82,6 +79,9 @@ const Lore = ({ skills }: Data) => {
           ))}
         </div>
       </ul>
+      <div className='absolute z-[1] bottom-0 left-0'>
+        <AutoDispose />
+      </div>
     </div>
   )
 }

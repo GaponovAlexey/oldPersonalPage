@@ -17,7 +17,7 @@ function Box1(props: any) {
       onPointerOut={(e) => setHover(false)}
     >
       <boxBufferGeometry />
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'gray'} />
+      <meshStandardMaterial color={hovered ? 'hotpink' : 'pink'} />
     </mesh>
   )
 }
