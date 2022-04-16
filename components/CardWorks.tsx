@@ -1,13 +1,6 @@
 import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 
-// interface Props {
-//   emoji: string
-//   hueA: number
-//   hueB: number
-//   urls: string
-// }
-
 const cardVariants: Variants = {
   offscreen: {
     y: 300,
