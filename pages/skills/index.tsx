@@ -5,9 +5,9 @@ import { Data } from '../../Types/Types'
 import Analytics from './analytics'
 import Backend from './backend'
 import Frontend from './frontend'
+import Globus from './Globus'
 import Other from './other'
 import UiUx from './uiux'
-import Globus from './Globus'
 
 export const getStaticProps = async () => {
   const response = await fetch('https://g-alexey.vercel.app/api/data')
@@ -118,7 +118,7 @@ const Lore = ({ skills }: Data) => {
 
   return (
     <div>
-      
+
       <div className={s.Skills}>
         <strong>
           <h2 onClick={funcOpenedFront}>Frontend</h2>
