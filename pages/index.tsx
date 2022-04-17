@@ -71,7 +71,7 @@ const Home = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ type: 'tween', delay: i * 0.04 }}
                   >
-                    <text>{el.title}</text>
+                    {el.title}
                   </motion.li>
                 ))}
               </ul>

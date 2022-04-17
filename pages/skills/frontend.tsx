@@ -10,7 +10,7 @@ const Frontend = ({ motion, skills }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
           >
-            {el.title}
+            <text>{el.title}</text>
           </motion.li>
         ))}
       </div>

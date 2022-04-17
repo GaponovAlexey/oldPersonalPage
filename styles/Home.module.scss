@@ -1,12 +1,12 @@
 .layout {
-  @apply p-1 md:w-9/12 m-auto max-w-[1024px];
+  @apply md:w-9/12 m-auto max-w-[1024px];
   .child {
     @apply min-h-[85vh] max-h-full;
   }
 }
 
 .componentHeader {
-  @apply md:py-4 md:px-2 md:flex justify-between;
+  @apply md:py-2 md:px-2 md:flex justify-between border-b border-gray-700;
   h1 {
     @media (max-width: 768px) {
       @apply text-2xl hidden;
@@ -18,7 +18,7 @@
       @media (max-width: 768px) {
         @apply text-xl;
       }
-      @apply pl-24 md:pl-10 first:pl-0 hover:text-pink-500 cursor-pointer
+      @apply pl-24 md:pl-10 first:pl-0 hover:text-indigo-300 cursor-pointer
        last:text-blue-400 pb-5;
     }
   }
@@ -28,7 +28,7 @@
 }
 
 .footer {
-  @apply bottom-0 text-center text-gray-300;
+  @apply bottom-0 text-center text-gray-200 border-t border-gray-700;
   > a {
     @apply text-blue-200;
   }
@@ -59,20 +59,24 @@
     @apply hover:text-teal-300;
   }
 }
-
-.skillsStyle {
-  @apply flex flex-wrap justify-between;
-  li {
-    @apply text-gray-400;
-  }
+.Skills {
+  @apply grid grid-cols-2   cursor-pointer;
   h2 {
-    @apply text-yellow-100;
+    @apply hover:text-teal-300 active:text-red-900;
   }
-  .animation {
-    @apply absolute z-[1] bottom-5 left-0;
+  .skillsStyle {
+    li {
+      @apply text-gray-400;
+    }
+    h2 {
+      @apply text-yellow-100;
+    }
   }
 }
 
 .workShop {
   @apply top-0 w-full;
+}
+.animation {
+  @apply fixed z-[1] bottom-0 left-0;
 }
