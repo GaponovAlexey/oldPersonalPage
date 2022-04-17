@@ -5,7 +5,7 @@ import { Data } from '../../Types/Types'
 import Analytics from './analytics'
 import Backend from './backend'
 import Frontend from './frontend'
-import Globus from './Globus'
+import MyGlobus from './MyGlobus'
 import Other from './other'
 import UiUx from './uiux'
 
@@ -133,7 +133,7 @@ const Lore = ({ skills }: Data) => {
         </strong>
       </div>
       <ul>
-        <div>{isOpenGlob && <Globus />}</div>
+        <div>{isOpenGlob && <MyGlobus />}</div>
         <div>{isOpenF && <Frontend motion={motion} skills={skills} />}</div>
         <div>{isOpenB && <Backend motion={motion} skills={skills} />}</div>
         <div>{isOpenU && <UiUx motion={motion} skills={skills} />}</div>
