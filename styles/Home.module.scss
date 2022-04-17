@@ -68,6 +68,9 @@
   h2 {
     @apply text-yellow-100;
   }
+  .animation {
+    @apply absolute z-[1] bottom-5 left-0;
+  }
 }
 
 .workShop {

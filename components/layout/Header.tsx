@@ -21,13 +21,13 @@ const Header = () => {
       <nav>
         <ul>
           <Link href='/'>
-            <li>Home</li>
+            <li>home</li>
           </Link>
           <Link href='/workShop'>
-            <li>Workshop</li>
+            <li>work</li>
           </Link>
-          <Link href='/lore'>
-            <li>Skills</li>
+          <Link href='/skills'>
+            <li>skills</li>
           </Link>
           <motion.li
             transition={{
