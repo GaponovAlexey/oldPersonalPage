@@ -62,7 +62,7 @@
 .Skills {
   @apply grid grid-cols-2   cursor-pointer;
   h2 {
-    @apply hover:text-teal-300 active:text-red-900;
+    @apply text-2xl hover:text-teal-300 active:text-red-900;
   }
   .skillsStyle {
     li {
