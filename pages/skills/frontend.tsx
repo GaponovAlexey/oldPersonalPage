@@ -49,21 +49,21 @@ function Word({ children, ...props }): any {
   })
   return (
     <Text
-      ref={ref}
-      onPointerOver={over}
-      onPointerOut={out}
-      {...props}
+      {...props as any}
       {...fontProps}
-      children={children}
+      ref={ref as MutableRefObject<HTMLInputElement | any>}
+      onPointerOver={over as any}
+      onPointerOut={out as any}
+      children={children as any}
     />
   )
 }
 
-function Cloud({ count = 4, radius = 20 }): void {
+function Cloud({ count = 4, radius = 20 }: any) {
   const words = useMemo(() => {
-    const temp = []
-    const spherical = new THREE.Spherical()
-    const phiSpan = Math.PI / (count + 1)
+    const temp = [] as any
+    const spherical = new THREE.Spherical() as any
+    const phiSpan = Math.PI / (count + 1) as any
     const thetaSpan = (Math.PI * 2) / count
     for (let i = 1; i < count + 1; i++)
       for (let j = 0; j < count; j++)
@@ -87,7 +87,7 @@ const Frontend = () => {
         <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
           <fog attach='fog' args={['#202025', 0, 80]} />
           <Cloud count={8} radius={20} />
-          <TrackballControls />
+          <TrackballControls /> 
         </Canvas>
       </div>
     </div>
