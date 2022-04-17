@@ -10,7 +10,7 @@ const WorkShop: NextPage = () => {
   const marginTop = useTransform(scrollY, [0, 300], offsetY)
   return (
     <div>
-      <div >
+      <div>
         <WorkList offsetY={offsetY} scrollY={scrollY} />
       </div>
       <motion.div style={{ marginTop }}>
