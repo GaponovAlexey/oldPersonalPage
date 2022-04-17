@@ -118,6 +118,7 @@ const Lore = ({ skills }: Data) => {
 
   return (
     <div>
+      
       <div className={s.Skills}>
         <strong>
           <h2 onClick={funcOpenedFront}>Frontend</h2>
