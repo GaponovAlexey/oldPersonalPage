@@ -1,8 +1,7 @@
-import * as THREE from 'three'
-import { useRef, useState, useMemo, useEffect, MutableRefObject } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
 import { Text, TrackballControls } from '@react-three/drei'
-import { useTransform, useViewportScroll } from 'framer-motion'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import * as THREE from 'three'
 
 const data = [
   'JS | TS',
@@ -84,12 +83,12 @@ function Word({ children, ...props }) {
   })
   return (
     <Text
-      {...props as any}
-      {...fontProps as any}
+      {...(props as any)}
+      {...(fontProps as any)}
       ref={ref as any}
       onPointerOver={over as any}
       onPointerOut={out as any}
-      children={children as any }
+      children={children as any}
     />
   )
 }
@@ -125,7 +124,5 @@ const Globus = () => {
     </div>
   )
 }
-
-
 
 export default Globus
