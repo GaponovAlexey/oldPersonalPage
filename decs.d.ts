@@ -1,1 +1,4 @@
-declare module "MyGlobus"
+"include": [
+  "src",
+  "types"
+]
