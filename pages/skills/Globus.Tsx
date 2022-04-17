@@ -113,13 +113,13 @@ function Cloud({ count = 4, radius = 20 }) {
     <Word key={index} position={pos} children={word} />
   ))
 }
-const Globus = () => {
+const Globus = (props) => {
   return (
     <div className='h-[700px]'>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
         <fog attach='fog' args={['#1010de', 0, 80]} />
         <Cloud count={8} radius={20} />
-        <TrackballControls />
+        <TrackballControls  {...props}/>
       </Canvas>
     </div>
   )
