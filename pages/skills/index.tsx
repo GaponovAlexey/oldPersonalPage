@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import { useState } from 'react'
-import AutoDispose from '../../components/animation/box'
 import s from '../../styles/Home.module.scss'
 import { Data } from '../../Types/Types'
 import Analytics from './analytics'
@@ -9,6 +7,7 @@ import Backend from './backend'
 import Frontend from './frontend'
 import Other from './other'
 import UiUx from './uiux'
+import Globus from './Globus'
 
 export const getStaticProps = async () => {
   const response = await fetch('https://g-alexey.vercel.app/api/data')
@@ -17,41 +16,99 @@ export const getStaticProps = async () => {
 }
 
 const Lore = ({ skills }: Data) => {
-  const [isOpenF, setIsOpenF] = useState(true)
+  const [isOpenGlob, setIsOpenGlob] = useState(true)
+  const [isOpenF, setIsOpenF] = useState(false)
   const [isOpenB, setIsOpenB] = useState(false)
   const [isOpenU, setIsOpenU] = useState(false)
   const [isOpenA, setIsOpenA] = useState(false)
   const [isOpenO, setIsOpenO] = useState(false)
 
   const funcOpenedFront = () => {
-    setIsOpenF(!isOpenF)
-    setIsOpenB(false)
-    setIsOpenU(false)
-    setIsOpenA(false)
-    setIsOpenO(false)
+    if (isOpenGlob) {
+      setIsOpenF(!isOpenF)
+      setIsOpenB(false)
+      setIsOpenU(false)
+      setIsOpenA(false)
+      setIsOpenO(false)
+      setIsOpenGlob(false)
+    } else {
+      setIsOpenGlob(!isOpenGlob)
+      setIsOpenA(false)
+      setIsOpenF(false)
+      setIsOpenB(false)
+      setIsOpenU(false)
+      setIsOpenO(false)
+    }
   }
   const funcOpenedBack = () => {
-    setIsOpenF(false)
-    setIsOpenB(!isOpenB)
-    setIsOpenU(false)
-    setIsOpenA(false)
-    setIsOpenO(false)
+    if (isOpenGlob) {
+      setIsOpenF(false)
+      setIsOpenB(!isOpenB)
+      setIsOpenU(false)
+      setIsOpenA(false)
+      setIsOpenO(false)
+      setIsOpenGlob(false)
+    } else {
+      setIsOpenGlob(!isOpenGlob)
+      setIsOpenA(false)
+      setIsOpenF(false)
+      setIsOpenB(false)
+      setIsOpenU(false)
+      setIsOpenO(false)
+    }
   }
   const funcOpenedUxui = () => {
-    setIsOpenF(false)
-    setIsOpenB(false)
-    setIsOpenU(!isOpenU)
-    setIsOpenA(false)
-    setIsOpenO(false)
+    if (isOpenGlob) {
+      setIsOpenF(false)
+      setIsOpenB(false)
+      setIsOpenU(!isOpenU)
+      setIsOpenA(false)
+      setIsOpenO(false)
+      setIsOpenGlob(false)
+    } else {
+      setIsOpenGlob(!isOpenGlob)
+      setIsOpenA(false)
+      setIsOpenF(false)
+      setIsOpenB(false)
+      setIsOpenU(false)
+      setIsOpenO(false)
+    }
   }
   const funcOpenedAlog = () => {
-    setIsOpenF(false)
-    setIsOpenB(false)
-    setIsOpenU(false)
-    setIsOpenA(!isOpenA)
-    setIsOpenO(false)
+    if (isOpenGlob) {
+      setIsOpenF(false)
+      setIsOpenB(false)
+      setIsOpenU(false)
+      setIsOpenA(!isOpenA)
+      setIsOpenO(false)
+      setIsOpenGlob(false)
+    } else {
+      setIsOpenGlob(!isOpenGlob)
+      setIsOpenA(false)
+      setIsOpenF(false)
+      setIsOpenB(false)
+      setIsOpenU(false)
+      setIsOpenO(false)
+    }
   }
   const funcOpenedOther = () => {
+    if (isOpenGlob) {
+      setIsOpenF(false)
+      setIsOpenB(false)
+      setIsOpenU(false)
+      setIsOpenA(false)
+      setIsOpenO(!isOpenO)
+      setIsOpenGlob(false)
+    } else {
+      setIsOpenGlob(!isOpenGlob)
+      setIsOpenO(false)
+      setIsOpenF(false)
+      setIsOpenB(false)
+      setIsOpenU(false)
+      setIsOpenA(false)
+    }
+  }
+  const IsOpenGlob = () => {
     setIsOpenF(false)
     setIsOpenB(false)
     setIsOpenU(false)
@@ -60,8 +117,8 @@ const Lore = ({ skills }: Data) => {
   }
 
   return (
-    <div className={s.Skills}>
-      <div>
+    <div>
+      <div className={s.Skills}>
         <strong>
           <h2 onClick={funcOpenedFront}>Frontend</h2>
           <h2 onClick={funcOpenedBack}>Backend</h2>
@@ -74,8 +131,9 @@ const Lore = ({ skills }: Data) => {
           <h2 onClick={funcOpenedOther}>Other</h2>
         </strong>
       </div>
-      <ul className={s.skillsStyle}>
-        <div>{isOpenF && <Frontend />}</div>
+      <ul>
+        <div>{isOpenGlob && <Globus />}</div>
+        <div>{isOpenF && <Frontend motion={motion} skills={skills} />}</div>
         <div>{isOpenB && <Backend motion={motion} skills={skills} />}</div>
         <div>{isOpenU && <UiUx motion={motion} skills={skills} />}</div>
         <div>{isOpenA && <Analytics motion={motion} skills={skills} />}</div>

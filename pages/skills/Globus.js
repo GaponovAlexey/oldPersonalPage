@@ -22,6 +22,40 @@ const data = [
   'TailwindCSS',
   'Styled-Components',
   'Emotion',
+  'JS | TS',
+  'HTML | CSS | Sass',
+  'React | NextJs',
+  'React Hooks',
+  'React Context API',
+  'Redux Toolkit',
+  'Redux Saga',
+  'Redux Persist',
+  'RTK Query',
+  'React Router6',
+  'React Transition Group',
+  'React Hook Form',
+  'Slick',
+  'PassportJs',
+  'TailwindCSS',
+  'Styled-Components',
+  'Emotion',
+  'JS | TS',
+  'HTML | CSS | Sass',
+  'React | NextJs',
+  'React Hooks',
+  'React Context API',
+  'Redux Toolkit',
+  'Redux Saga',
+  'Redux Persist',
+  'RTK Query',
+  'React Router6',
+  'React Transition Group',
+  'React Hook Form',
+  'Slick',
+  'PassportJs',
+  'TailwindCSS',
+  'Styled-Components',
+  'Emotion',
 ]
 
 function Word({ children, ...props }) {
@@ -44,7 +78,7 @@ function Word({ children, ...props }) {
   useFrame(({ camera }) => {
     ref.current.quaternion.copy(camera.quaternion)
     ref.current.material.color.lerp(
-      color.set(hovered ? '#fa2720' : 'white'),
+      color.set(hovered ? '#e02f82' : 'white'),
       0.1
     )
   })
@@ -80,20 +114,11 @@ function Cloud({ count = 4, radius = 20 }) {
     <Word key={index} position={pos} children={word} />
   ))
 }
-const Frontend = () => {
-  return (
-    <div>
-      <h2>Frontend</h2>
-      <Globus />
-    </div>
-  )
-}
-
 const Globus = () => {
   return (
-    <div className=''>
+    <div className='h-[700px]'>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
-        <fog attach='fog' args={['#202025', 0, 80]} />
+        <fog attach='fog' args={['#1010de', 0, 80]} />
         <Cloud count={8} radius={20} />
         <TrackballControls />
       </Canvas>
@@ -101,4 +126,6 @@ const Globus = () => {
   )
 }
 
-export default Frontend
+
+
+export default Globus

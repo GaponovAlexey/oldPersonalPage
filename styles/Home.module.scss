@@ -55,20 +55,18 @@
 }
 .workList {
   @apply mt-10 flex flex-wrap md:flex-nowrap justify-between p-2 cursor-pointer;
-  li {
+  > li {
     @apply hover:text-teal-300;
   }
 }
 .Skills {
-  @apply md:flex-wrap flex cursor-pointer;
-  strong {
-    @apply flex;
-  }
+  @apply md:flex-wrap flex justify-between cursor-pointer;
   h2 {
-    @apply text-2xl hover:text-teal-300 active:text-red-900;
+    @apply text-xl hover:text-teal-300 active:text-red-900;
   }
+
   .skillsStyle {
-    @apply w-1/2 h-1/2;
+    @apply w-[1500px] h-[1500px];
   }
 }
 
