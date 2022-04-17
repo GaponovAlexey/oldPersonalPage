@@ -61,16 +61,14 @@
 }
 .Skills {
   @apply md:flex-wrap flex cursor-pointer;
+  strong {
+    @apply flex;
+  }
   h2 {
-    @apply md:min-w-[200px]  text-2xl hover:text-teal-300 active:text-red-900;
+    @apply text-2xl hover:text-teal-300 active:text-red-900;
   }
   .skillsStyle {
-    li {
-      @apply text-gray-400;
-    }
-    h2 {
-      @apply text-yellow-100;
-    }
+    @apply w-1/2 h-1/2;
   }
 }
 

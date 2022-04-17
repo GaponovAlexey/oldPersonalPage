@@ -62,14 +62,20 @@ const Lore = ({ skills }: Data) => {
   return (
     <div className={s.Skills}>
       <div>
-        <h2 onClick={funcOpenedFront}>Frontend</h2>
-        <h2 onClick={funcOpenedBack}>Backend</h2>
-        <h2 onClick={funcOpenedUxui}>UX/UI</h2>
-        <h2 onClick={funcOpenedAlog}>Analytics</h2>
-        <h2 onClick={funcOpenedOther}>Other</h2>
+        <strong>
+          <h2 onClick={funcOpenedFront}>Frontend</h2>
+          <h2 onClick={funcOpenedBack}>Backend</h2>
+        </strong>
+        <strong>
+          <h2 onClick={funcOpenedUxui}>UX/UI</h2>
+        </strong>
+        <strong>
+          <h2 onClick={funcOpenedAlog}>Analytics</h2>
+          <h2 onClick={funcOpenedOther}>Other</h2>
+        </strong>
       </div>
       <ul className={s.skillsStyle}>
-        <div>{isOpenF && <Frontend motion={motion} skills={skills} />}</div>
+        <div>{isOpenF && <Frontend />}</div>
         <div>{isOpenB && <Backend motion={motion} skills={skills} />}</div>
         <div>{isOpenU && <UiUx motion={motion} skills={skills} />}</div>
         <div>{isOpenA && <Analytics motion={motion} skills={skills} />}</div>
