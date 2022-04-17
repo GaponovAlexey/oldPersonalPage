@@ -75,9 +75,9 @@ const Lore = ({ skills }: Data) => {
         <div>{isOpenA && <Analytics motion={motion} skills={skills} />}</div>
         <div>{isOpenO && <Other motion={motion} skills={skills} />}</div>
       </ul>
-      <div className={s.animation}>
+      {/* <div className={s.animation}>
         <AutoDispose />
-      </div>
+      </div> */}
     </div>
   )
 }

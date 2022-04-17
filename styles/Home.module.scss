@@ -60,9 +60,9 @@
   }
 }
 .Skills {
-  @apply grid grid-cols-2   cursor-pointer;
+  @apply md:flex-wrap flex cursor-pointer;
   h2 {
-    @apply text-2xl hover:text-teal-300 active:text-red-900;
+    @apply md:min-w-[200px]  text-2xl hover:text-teal-300 active:text-red-900;
   }
   .skillsStyle {
     li {
