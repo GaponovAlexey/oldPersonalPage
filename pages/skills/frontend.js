@@ -23,7 +23,7 @@ const data = [
   'Emotion',
 ]
 
-function Word({ children, ...props }): any {
+function Word({ children, ...props }) {
   const color = new THREE.Color()
   const fontProps = {
     font: '/Inter-Bold.woff',
@@ -32,15 +32,15 @@ function Word({ children, ...props }): any {
     lineHeight: 1,
     'material-toneMapped': false,
   }
-  const ref = useRef() as React.MutableRefObject<HTMLInputElement | any>
+  const ref = useRef()
   const [hovered, setHovered] = useState(false)
   const over = (e) => (e.stopPropagation(), setHovered(true))
   const out = () => setHovered(false)
-  useEffect((): any => {
+  useEffect(() => {
     if (hovered) document.body.style.cursor = 'pointer'
     return () => (document.body.style.cursor = 'auto')
   }, [hovered])
-  useFrame(({ camera }: any): void => {
+  useFrame(({ camera }) => {
     ref.current.quaternion.copy(camera.quaternion)
     ref.current.material.color.lerp(
       color.set(hovered ? '#fa2720' : 'white'),
@@ -49,21 +49,21 @@ function Word({ children, ...props }): any {
   })
   return (
     <Text
-      {...(props as any)}
+      {...props}
       {...fontProps}
-      ref={ref as MutableRefObject<HTMLInputElement | any>}
-      onPointerOver={over as any}
-      onPointerOut={out as any}
-      children={children as any}
+      ref={ref}
+      onPointerOver={over}
+      onPointerOut={out}
+      children={children}
     />
   )
 }
 
-function Cloud({ count = 4, radius = 20 }: any) {
+function Cloud({ count = 4, radius = 20 }) {
   const words = useMemo(() => {
-    const temp = [] as any
-    const spherical = new THREE.Spherical() as any
-    const phiSpan = (Math.PI / (count + 1)) as any
+    const temp = []
+    const spherical = new THREE.Spherical()
+    const phiSpan = Math.PI / (count + 1)
     const thetaSpan = (Math.PI * 2) / count
     for (let i = 1; i < count + 1; i++)
       for (let j = 0; j < count; j++)
@@ -87,7 +87,7 @@ const Frontend = () => {
         <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
           <fog attach='fog' args={['#202025', 0, 80]} />
           <Cloud count={8} radius={20} />
-          <TrackballControls  rotation rotateSpeed={2} />
+          <TrackballControls />
         </Canvas>
       </div>
     </div>
