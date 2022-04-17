@@ -67,11 +67,11 @@ function Word({ children, ...props }) {
     lineHeight: 1,
     'material-toneMapped': false,
   }
-  const ref = useRef()
+  const ref = useRef() as any
   const [hovered, setHovered] = useState(false)
   const over = (e) => (e.stopPropagation(), setHovered(true))
   const out = () => setHovered(false)
-  useEffect(() => {
+  useEffect((): any => {
     if (hovered) document.body.style.cursor = 'pointer'
     return () => (document.body.style.cursor = 'auto')
   }, [hovered])
@@ -84,19 +84,19 @@ function Word({ children, ...props }) {
   })
   return (
     <Text
-      {...props}
-      {...fontProps}
-      ref={ref}
-      onPointerOver={over}
-      onPointerOut={out}
-      children={children}
+      {...props as any}
+      {...fontProps as any}
+      ref={ref as any}
+      onPointerOver={over as any}
+      onPointerOut={out as any}
+      children={children as any }
     />
   )
 }
 
 function Cloud({ count = 4, radius = 20 }) {
   const words = useMemo(() => {
-    const temp = []
+    const temp = [] as any
     const spherical = new THREE.Spherical()
     const phiSpan = Math.PI / (count + 1)
     const thetaSpan = (Math.PI * 2) / count
