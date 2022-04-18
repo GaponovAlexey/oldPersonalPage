@@ -121,17 +121,29 @@ const Lore = ({ skills }: Data) => {
   return (
     <div>
       <div className={s.Skills}>
-        <strong>
+        <motion.strong
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 onClick={funcOpenedFront}>Frontend</h2>
           <h2 onClick={funcOpenedBack}>Backend</h2>
-        </strong>
-        <strong>
+        </motion.strong>
+        <motion.strong
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 onClick={funcOpenedUxui}>UX/UI</h2>
-        </strong>
-        <strong>
+        </motion.strong>
+        <motion.strong
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 onClick={funcOpenedAlog}>Analytics</h2>
           <h2 onClick={funcOpenedOther}>Other</h2>
-        </strong>
+        </motion.strong>
       </div>
       <ul>
         <motion.li
