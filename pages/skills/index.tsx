@@ -159,9 +159,6 @@ const Lore = ({ skills }: Data) => {
           <div>{isOpenO && <Other motion={motion} skills={skills} />}</div>
         </motion.li>
       </ul>
-      <div className={s.animation}>
-        <AutoDispose />
-      </div>
     </div>
   )
 }

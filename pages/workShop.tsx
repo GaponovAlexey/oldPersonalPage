@@ -2,6 +2,8 @@ import { NextPage } from 'next'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
 import WorkList from '../components/WorkList'
 import CardWorks from '../components/CardWorks'
+import AutoDispose from '../components/animation/box'
+import s from '../styles/Home.module.scss'
 
 const WorkShop: NextPage = () => {
   const { scrollY } = useViewportScroll()
@@ -16,6 +18,9 @@ const WorkShop: NextPage = () => {
       <motion.div style={{ marginTop }}>
         <CardWorks />
       </motion.div>
+      <div className={s.animation}>
+        <AutoDispose />
+      </div>
     </div>
   )
 }
