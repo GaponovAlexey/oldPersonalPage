@@ -120,7 +120,7 @@ const MyGlobus = ({props}) => {
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
         <fog attach='fog' args={['#1010de', 0, 80]} />
         <Cloud count={8} radius={20} />
-        <TrackballControls noZoom noPan  {...props}  />
+        <TrackballControls noZoom staticMoving  {...props}  />
       </Canvas>
     </div>
   )
