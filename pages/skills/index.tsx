@@ -118,7 +118,6 @@ const Lore = ({ skills }: Data) => {
 
   return (
     <div>
-
       <div className={s.Skills}>
         <strong>
           <h2 onClick={funcOpenedFront}>Frontend</h2>
@@ -133,12 +132,18 @@ const Lore = ({ skills }: Data) => {
         </strong>
       </div>
       <ul>
-        <div>{isOpenGlob && <MyGlobus props={{attach: 'trackball'}} />}</div>
-        <div>{isOpenF && <Frontend motion={motion} skills={skills} />}</div>
-        <div>{isOpenB && <Backend motion={motion} skills={skills} />}</div>
-        <div>{isOpenU && <UiUx motion={motion} skills={skills} />}</div>
-        <div>{isOpenA && <Analytics motion={motion} skills={skills} />}</div>
-        <div>{isOpenO && <Other motion={motion} skills={skills} />}</div>
+        <motion.li
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <div>{isOpenGlob && <MyGlobus props={{ attach: 'geometry' }} />}</div>
+          <div>{isOpenF && <Frontend motion={motion} skills={skills} />}</div>
+          <div>{isOpenB && <Backend motion={motion} skills={skills} />}</div>
+          <div>{isOpenU && <UiUx motion={motion} skills={skills} />}</div>
+          <div>{isOpenA && <Analytics motion={motion} skills={skills} />}</div>
+          <div>{isOpenO && <Other motion={motion} skills={skills} />}</div>
+        </motion.li>
       </ul>
       {/* <div className={s.animation}>
         <AutoDispose />
