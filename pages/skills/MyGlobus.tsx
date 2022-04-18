@@ -1,6 +1,6 @@
 import { Text, TrackballControls } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { memo, useEffect, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 
 const data = [
@@ -119,4 +119,4 @@ const MyGlobus = ({ props }) => {
   )
 }
 
-export default MyGlobus
+export default memo(MyGlobus)

@@ -13,7 +13,7 @@
     }
   }
   > nav > ul {
-    @apply flex flex-wrap;
+    @apply flex flex-wrap text-xl ;
     > li {
       @media (max-width: 768px) {
         @apply text-xl;

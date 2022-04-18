@@ -37,7 +37,6 @@ const Home = () => {
             About me
           </motion.div>
         </strong>
-
         <div className={s.about}>
           <motion.div
             initial={{ opacity: 0, y: -100 }}

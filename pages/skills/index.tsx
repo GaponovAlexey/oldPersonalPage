@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import AutoDispose from '../../components/animation/box'
 import s from '../../styles/Home.module.scss'
 import { Data } from '../../Types/Types'
 import Analytics from './analytics'
 import Backend from './backend'
 import Frontend from './frontend'
 import MyGlobus from './MyGlobus'
+
 import Other from './other'
 import UiUx from './uiux'
 
@@ -145,9 +147,9 @@ const Lore = ({ skills }: Data) => {
           <div>{isOpenO && <Other motion={motion} skills={skills} />}</div>
         </motion.li>
       </ul>
-      {/* <div className={s.animation}>
+      <div className={s.animation}>
         <AutoDispose />
-      </div> */}
+      </div>
     </div>
   )
 }
