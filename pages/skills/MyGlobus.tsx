@@ -116,11 +116,11 @@ function Cloud({ count = 4, radius = 20 }) {
 }
 const MyGlobus = ({props}) => {
   return (
-    <div className='h-[700px]'>
+    <div className='h-[750px]'>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
         <fog attach='fog' args={['#1010de', 0, 80]} />
         <Cloud count={8} radius={20} />
-        <TrackballControls noZoom  {...props}  />
+        <TrackballControls noZoom noPan  {...props}  />
       </Canvas>
     </div>
   )
