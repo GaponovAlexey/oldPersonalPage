@@ -18,7 +18,7 @@
       @media (max-width: 768px) {
         @apply text-xl;
       }
-      @apply pl-24 md:pl-10 first:pl-0 hover:text-indigo-300 cursor-pointer
+      @apply pl-5 md:pl-10 first:pl-0 hover:text-indigo-300 cursor-pointer
        last:text-blue-400 pb-5;
     }
   }
