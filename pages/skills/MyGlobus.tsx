@@ -114,7 +114,7 @@ function Cloud({ count = 4, radius = 20 }) {
     <Word key={index} position={pos} children={word} />
   ))
 }
-const MyGlobus = (props) => {
+const MyGlobus = ({props}) => {
   return (
     <div className='h-[700px]'>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
