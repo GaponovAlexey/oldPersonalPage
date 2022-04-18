@@ -3,6 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 
+
 const data = [
   'JS | TS',
   'HTML | CSS | Sass',
@@ -113,13 +114,13 @@ function Cloud({ count = 4, radius = 20 }) {
     <Word key={index} position={pos} children={word} />
   ))
 }
-const MyGlobus = (props: any) => {
+const MyGlobus = (props) => {
   return (
     <div className='h-[700px]'>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
         <fog attach='fog' args={['#1010de', 0, 80]} />
         <Cloud count={8} radius={20} />
-        <TrackballControls  {...props}/>
+        <TrackballControls noZoom  {...props}  />
       </Canvas>
     </div>
   )

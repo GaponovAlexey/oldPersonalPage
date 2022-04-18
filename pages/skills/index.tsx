@@ -133,7 +133,7 @@ const Lore = ({ skills }: Data) => {
         </strong>
       </div>
       <ul>
-        <div>{isOpenGlob && <MyGlobus />}</div>
+        <div>{isOpenGlob && <MyGlobus props={'noZoom'} />}</div>
         <div>{isOpenF && <Frontend motion={motion} skills={skills} />}</div>
         <div>{isOpenB && <Backend motion={motion} skills={skills} />}</div>
         <div>{isOpenU && <UiUx motion={motion} skills={skills} />}</div>
