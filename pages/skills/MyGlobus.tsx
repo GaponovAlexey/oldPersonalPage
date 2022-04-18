@@ -3,7 +3,6 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 
-
 const data = [
   'JS | TS',
   'HTML | CSS | Sass',
@@ -22,40 +21,34 @@ const data = [
   'TailwindCSS',
   'Styled-Components',
   'Emotion',
-  'JS | TS',
-  'HTML | CSS | Sass',
-  'React | NextJs',
-  'React Hooks',
-  'React Context API',
-  'Redux Toolkit',
-  'Redux Saga',
-  'Redux Persist',
-  'RTK Query',
-  'React Router6',
-  'React Transition Group',
-  'React Hook Form',
-  'Slick',
-  'PassportJs',
-  'TailwindCSS',
-  'Styled-Components',
-  'Emotion',
-  'JS | TS',
-  'HTML | CSS | Sass',
-  'React | NextJs',
-  'React Hooks',
-  'React Context API',
-  'Redux Toolkit',
-  'Redux Saga',
-  'Redux Persist',
-  'RTK Query',
-  'React Router6',
-  'React Transition Group',
-  'React Hook Form',
-  'Slick',
-  'PassportJs',
-  'TailwindCSS',
-  'Styled-Components',
-  'Emotion',
+  'NodeJS',
+  'Express',
+  'RESTful API',
+  'SQL',
+  'Firebase',
+  'Supabase',
+  'MongoDB',
+  'Mongoose',
+  'GraphQL',
+  'Apollo Client',
+  'Apollo Server',
+  'Figma',
+  'Framer motion',
+  'PixiJS',
+  'React-Three-fiber',
+  'Blender 3D',
+  'Materialize',
+  'Ant Design of React',
+  'Material-UI',
+  'Material Design 3',
+  'React-Vis',
+  'UIkit',
+  'Chart.js',
+  'React-Motion',
+  'React Materialize',
+  'React Bootstrap',
+  'React-Spring',
+  'Tailblocks',
 ]
 
 function Word({ children, ...props }) {
@@ -114,13 +107,13 @@ function Cloud({ count = 4, radius = 20 }) {
     <Word key={index} position={pos} children={word} />
   ))
 }
-const MyGlobus = ({props}) => {
+const MyGlobus = ({ props }) => {
   return (
     <div className='h-[750px]'>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
         <fog attach='fog' args={['#1010de', 0, 80]} />
         <Cloud count={8} radius={20} />
-        <TrackballControls noZoom staticMoving  {...props}  />
+        <TrackballControls noZoom staticMoving {...props} />
       </Canvas>
     </div>
   )
