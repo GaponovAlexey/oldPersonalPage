@@ -29,15 +29,9 @@ const Header = () => {
           <Link href='/skills'>
             <li>my skills</li>
           </Link>
-          <motion.li
-            transition={{
-              type: 'just',
-              repeat: Infinity,
-            }}
-            animate={{ rotate: 2 }}
-          >
+          <li className='animate-pulse '>
             <Link href='https://t.me/g_alexey_ur'>contact me</Link>
-          </motion.li>
+          </li>
         </ul>
       </nav>
     </div>
