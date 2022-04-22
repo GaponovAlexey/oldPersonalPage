@@ -29,7 +29,7 @@ const Header = () => {
           <Link href='/skills'>
             <li>my skills</li>
           </Link>
-          <li className='animate-pulse '>
+          <li>
             <Link href='https://t.me/g_alexey_ur'>contact me</Link>
           </li>
         </ul>
