@@ -16,6 +16,7 @@ const cardVariants: Variants = {
   },
 }
 
+
 const Card = ({ myIMG, myURL, hueA, hueB }: any) => {
   const hue = (h: number) => `hsl(${h}, 100%, 50%)`
   const background = `linear-gradient(601deg, ${hue(hueA)}, ${hue(hueB)})`
