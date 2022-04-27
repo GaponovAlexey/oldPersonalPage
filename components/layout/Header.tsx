@@ -2,6 +2,7 @@ import s from '../../styles/Home.module.scss'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Head from 'next/head'
+
 const Header = () => {
   return (
     <div className={s.componentHeader}>
