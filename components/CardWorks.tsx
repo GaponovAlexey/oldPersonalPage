@@ -65,6 +65,7 @@ const food: any = [
   ],
 ]
 
+
 const CardWorks = () => {
   return food.map(([myIMG, myURL, hueA, hueB]: any) => (
     <Card myIMG={myIMG} myURL={myURL} key={myIMG} hueA={hueA} hueB={hueB} />
