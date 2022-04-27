@@ -13,8 +13,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "noImplicitAny": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "src",
+    "types",
+    "**/*.ts",
+    "**/*.js",
+    "**/*.tsx",
+    "components/data/data.js",
+    "pages/testing.tsx",
+    "pages/skills/frontend.tsx"
+  ],
   "exclude": ["node_modules"]
 }

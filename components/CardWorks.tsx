@@ -17,29 +17,9 @@ const cardVariants: Variants = {
 }
 
 
-const food: any = [
-  {
-    photoWork: '/jpg/portfolio/port1.png',
-    url: 'https://podiatry-victoria.vercel.app/',
-    hueA: 30,
-    hueB: 50,
-  },
-  {
-    photoWork: '/jpg/portfolio/task2.png',
-    url: 'https://podiatry-victoria.vercel.app/',
-  },
-  {
-    photoWork: '/jpg/portfolio/task3.png',
-    url: 'https://podiatry-victoria.vercel.app/',
-  },
-  // ['/jpg/portfolio/task2.png', 20, 40],
-  // ['/jpg/portfolio/task3.png', 60, 90],
-]
-
-const CardWorks = () => {
-
-  // const hue = (h: number) => `hsl(${h}, 100%, 50%)`
-  // const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`
+const Card = ({ myIMG, myURL, hueA, hueB }: any) => {
+  const hue = (h: number) => `hsl(${h}, 100%, 50%)`
+  const background = `linear-gradient(601deg, ${hue(hueA)}, ${hue(hueB)})`
   return (
     <motion.div
       className='card-container'
@@ -47,16 +27,49 @@ const CardWorks = () => {
       whileInView='onscreen'
       viewport={{ once: true, amount: 0.8 }}
     >
-      <div className='splash' style={{ background: 'gray' }} />
+      <div className='splash' style={{ background }} />
       <motion.div className='card' variants={cardVariants}>
-        {food.map((el) => {
-          return <a href={el.url}>
-            <img src={el.photoWork} alt='img' />
-          </a>
-        })}
+        <a href={myURL}>
+          <img src={myIMG} alt='img' />
+        </a>
       </motion.div>
     </motion.div>
   )
+}
+
+const food: any = [
+  [
+    '/jpg/portfolio/port1.png',
+    'https://podiatry-victoria.vercel.app/',
+    160,
+    190,
+  ],
+  ['/jpg/portfolio/work4.png', 'https://portfolio-2502.vercel.app/', 22, 30],
+  [
+    '/jpg/portfolio/japan1.png',
+    'https://gaponovalexey.github.io/learnwerska/',
+    2,
+    70,
+  ],
+  [
+    '/jpg/portfolio/task2.png',
+    'https://gaponovalexey.github.io/prod3/',
+    200,
+    170,
+  ],
+  [
+    '/jpg/portfolio/task3.png',
+    'https://gaponovalexey.github.io/react-demotwo/',
+    390,
+    190,
+  ],
+]
+
+
+const CardWorks = () => {
+  return food.map(([myIMG, myURL, hueA, hueB]: any) => (
+    <Card myIMG={myIMG} myURL={myURL} key={myIMG} hueA={hueA} hueB={hueB} />
+  ))
 }
 
 export default CardWorks

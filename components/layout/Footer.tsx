@@ -3,8 +3,7 @@ const Footer = () => {
   return (
     <div className={s.footer}>
       <h4>created by Alexey Gaponov</h4>
-      <p>alexei.gaponov@gmail.com ©2022 portfolio website</p>
-      <a href='https://t.me/g_alexey_ur'>t.me</a>
+      <p> ©2022 portfolio website | alexei.gaponov@gmail.com</p>
     </div>
   )
 }

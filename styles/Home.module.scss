@@ -1,17 +1,25 @@
 .layout {
-  @apply w-9/12 m-auto max-w-[1024px];
+  @apply md:w-9/12 m-auto max-w-[1024px];
   .child {
-    @apply min-h-[80vh] max-h-full;
+    @apply min-h-[85vh] max-h-full;
   }
 }
 
 .componentHeader {
-  @apply bg-black text-cyan-50 py-4 px-2 flex justify-between;
+  @apply md:py-2 md:px-2 md:flex justify-between border-b border-gray-700;
+  h1 {
+    @media (max-width: 768px) {
+      @apply text-2xl hidden;
+    }
+  }
   > nav > ul {
-    @apply flex flex-wrap;
+    @apply flex flex-wrap text-xl ;
     > li {
-      @apply pl-10 hover:text-red-500 cursor-pointer
-       last:text-blue-500;
+      @media (max-width: 768px) {
+        @apply text-xl;
+      }
+      @apply pl-3 md:pl-10 first:pl-0 hover:text-indigo-300 cursor-pointer
+       last:text-blue-400 pb-5 last:animate-pulse;
     }
   }
   > h1 {
@@ -20,7 +28,7 @@
 }
 
 .footer {
-  @apply text-center text-gray-500;
+  @apply bottom-0 text-center text-gray-200 border-t border-gray-700;
   > a {
     @apply text-blue-200;
   }
@@ -31,24 +39,40 @@
     @apply text-right text-blue-400;
   }
   .about {
-    @apply flex;
+    @apply flex flex-wrap md:flex-nowrap;
     > div {
-      @apply lg:flex-wrap;
       > strong {
-        @apply text-gray-400;
+        @apply text-gray-300;
         > ul {
-          @apply ml-10;
+          @apply md:ml-10;
         }
         text {
-          @apply text-gray-600;
+          @apply text-gray-300;
         }
       }
     }
   }
 }
 .workList {
-  @apply grid grid-cols-3 p-2 cursor-pointer ;
-  li {
+  @apply mt-10 flex flex-wrap md:flex-nowrap justify-between p-2 cursor-pointer;
+  > li {
     @apply hover:text-teal-300;
   }
+}
+.Skills {
+  @apply md:flex-wrap flex justify-between cursor-pointer;
+  h2 {
+    @apply text-xl hover:text-teal-300 active:text-red-900;
+  }
+
+  .skillsStyle {
+    @apply w-[1500px] h-[1500px];
+  }
+}
+
+.workShop {
+  @apply top-0 w-full;
+}
+.animation {
+  @apply fixed z-[1] bottom-0 left-0;
 }

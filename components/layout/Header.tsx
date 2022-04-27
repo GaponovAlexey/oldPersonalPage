@@ -11,33 +11,29 @@ const Header = () => {
         <title>AlexeyGaponov</title>
         <link rel='icon' href='#!' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
           href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap'
           rel='stylesheet'
         ></link>
       </Head>
-      <h1>Personal</h1>
+      <h1>
+        <Link href='/'>Personal</Link>
+      </h1>
       <nav>
         <ul>
           <Link href='/'>
             <li>Home</li>
           </Link>
           <Link href='/workShop'>
-            <li>Workshop</li>
+            <li>my works</li>
           </Link>
-          <Link href='/Skills'>
-            <li>Skills</li>
+          <Link href='/skills'>
+            <li>my skills</li>
           </Link>
-          <motion.li
-            transition={{
-              type: 'just',
-              repeat: Infinity,
-            }}
-            animate={{ rotate: 2 }}
-          >
-            contact me
-          </motion.li>
+          <li>
+            <Link href='https://t.me/g_alexey_ur'>contact me</Link>
+          </li>
         </ul>
       </nav>
     </div>

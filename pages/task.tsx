@@ -32,6 +32,12 @@ const TaskJob: NextPage = () => {
       urlSite: 'https://learn-todo.vercel.app/',
       urlRepo: 'https://github.com/GaponovAlexey/learn-todo',
     },
+    {
+      id: 5,
+      title: 'japan tourists',
+      urlSite: 'https://gaponovalexey.github.io/learnwerska/',
+      urlRepo: 'https://github.com/GaponovAlexey/learnwerska',
+    },
   ]
 
   return (
