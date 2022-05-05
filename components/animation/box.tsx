@@ -8,6 +8,7 @@ function Box1(props: any) {
   useFrame(
     (state) => (mesh.current.position.y = Math.sin(state.clock.elapsedTime))
   )
+  
   return (
     <mesh
       {...props}
